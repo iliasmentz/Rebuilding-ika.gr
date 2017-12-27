@@ -1,65 +1,94 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/other.css" >
 
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-.w3-sidebar {
-  z-index: 3;
-  width: 250px;
-  top: 43px;
-  bottom: 0;
-  height: inherit;
-}
+    <style>
+    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+    .w3-sidebar {
+      z-index: 3;
+      width: 250px;
+      top: 43px;
+      bottom: 0;
+      height: inherit;
+    }
 
-p{
-    /*align-content: center;*/
-    align-items: center;
-    width: 600px;
-    /*padding: 10px;*/
-    border: 0px ;
-    margin: 0 auto;
-}
-</style>
+    p{
+        /*align-content: center;*/
+        align-items: center;
+        width: 600px;
+        /*padding: 10px;*/
+        border: 0px ;
+        margin: 0 auto;
+    }
+    </style>
+</head>
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-theme-l1">ΙΚΑ</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Αναζήτηση</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Γλώσσα</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Είσοδος/Εγγραφή</a>
-  </div>
-</div>
-
-<!-- Sidebar -->
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
-    <i class="fa fa-remove"></i>
-  </a>
-  <h4 class="w3-bar-item"><b>Μενού</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Αρχική</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Ασφάλεια</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Σύνταξη</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Επιχειρήσεις</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Οφειλές</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Άτομα με ειδικές Αναπηρίες</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Ενημερώσεις</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Συχνές Ερωτήσεις</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Επικοινωνία</a>
-</nav>
-
+    <nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">ΙΚΑ</a>
+			</div>
+			<ul class="nav navbar-nav homenav">
+				<li class="active">
+					<a href="#">Αρχική</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav mynavbar">
+				<li>
+					<a href="#">Αναζήτηση</a>
+				</li>
+				<li>
+					<a href="#">Γλώσσα</a>
+				</li>
+				<li>
+					<a href="#">Είσοδος/Έγγραφη</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<nav class="main-menu">
+		<ul>
+			<li>
+				<a href="/IKA/index.php"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
+			</li>
+			<li class="has-subnav">
+				<a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
+			</li>
+			<li class="has-subnav">
+				<a href="#"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+			</li>
+			<li class="has-subnav">
+				<a href="#"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-wheelchair"></i> <span class="nav-text">Άτομα με ειδικές Αναπηρίες</span></a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-text">Ενημερώσεις</span></a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-question-circle-o"></i> <span class="nav-text">Συχνές Ερωτήσεις</span></a>
+			</li>
+			<li>
+				<a href="#"><i class="fa fa-info fa-2x"></i> <span class="nav-text">Επικοινωνία</span></a>
+			</li>
+		</ul>
+	</nav>
 
 <div class="mymenu">
     <h1 style="text-align:center;"> Σύνταξη </h1>
