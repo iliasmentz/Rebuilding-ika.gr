@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Home Page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Latest compiled and minified CSS -->
@@ -14,15 +14,21 @@
 <body>
 
 <!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-theme-l1">ΙΚΑ</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Αναζήτηση</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Γλώσσα</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Είσοδος/Εγγραφή</a>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ΙΚΑ</a>
+    </div>
+    <ul class="nav navbar-nav homenav">
+      <li class="active"><a href="#">Αρχική</a></li>
+    </ul>
+    <ul class="nav navbar-nav mynavbar" >
+      <li><a href="#">Αναζήτηση</a></li>
+      <li><a href="#">Γλώσσα</a></li>
+      <li><a href="#">Είσοδος/Έγγραφη</a></li>
+    </ul>
   </div>
-</div>
+</nav>
 
 <div class="mymenu">
     <section class="c-fi">
