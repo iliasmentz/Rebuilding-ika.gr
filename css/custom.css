@@ -35,6 +35,7 @@ body:after {
     display: none;
     content: "small"
 }
+
 p {
     margin: 0 0 1.25rem;
     padding: 0
@@ -69,6 +70,16 @@ img {
     background: #b3d4fc;
     text-shadow: none
 }
+
+.mynavbar{
+    float:right;
+    margin-right : 2cm;
+}
+
+.homenav{
+    margin-left : 0.5cm;
+}
+
 .wrapper {
     margin-left: auto;
     margin-right: auto;

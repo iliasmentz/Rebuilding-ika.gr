@@ -1,0 +1,250 @@
+html, body, h1, h4 {
+	font-family: "Roboto", sans-serif;
+}
+.mynavbar {
+	float: right;
+	margin-right: 2cm;
+}
+.homenav {
+	margin-left: 0.5cm;
+}
+.w3-sidebar {
+	z-index: 3;
+	width: 250px;
+	top: 52px;
+	bottom: 0;
+	height: inherit;
+}
+/* W3.CSS 4.07 December 2017 by Jan Egil and Borge Refsnes */
+
+html {
+	box-sizing: border-box
+}
+*, *:before, *:after {
+	box-sizing: inherit
+}
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%
+}
+body {
+	margin: 0
+}
+footer, nav {
+	display: block
+}
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects
+}
+a:active, a:hover {
+	outline-width: 0
+}
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 0.54
+}
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit
+}
+/* End extract */
+
+html, body {
+	font-family: Verdana, sans-serif;
+	font-size: 15px;
+	line-height: 1.5
+}
+html {
+	overflow-x: hidden
+}
+h1 {
+	font-size: 36px
+}
+h4 {
+	font-size: 20px
+}
+h1, h4 {
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-weight: 400;
+	margin: 10px 0
+}
+a {
+	color: inherit
+}
+.w3-button {
+	border: none;
+	display: inline-block;
+	outline: 0;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap
+}
+.w3-button {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+.w3-button:disabled {
+	cursor: not-allowed;
+	opacity: 0.3
+}
+:disabled * {
+	pointer-events: none
+}
+.w3-sidebar {
+	height: 100%;
+	width: 200px;
+	background-color: #fff;
+	position: fixed!important;
+	z-index: 1;
+	overflow: auto
+}
+.w3-main {
+	transition: margin-left .4s
+}
+.w3-bar {
+	width: 100%;
+	overflow: hidden
+}
+.w3-center .w3-bar {
+	display: inline-block;
+	width: auto
+}
+.w3-bar .w3-button {
+	white-space: normal
+}
+.w3-bar-block .w3-bar-item {
+	width: 100%;
+	display: block;
+	padding: 8px 16px;
+	text-align: left;
+	border: none;
+	outline: none;
+	white-space: normal;
+	float: none
+}
+.w3-container:after, .w3-container:before, .w3-row:after, .w3-row:before, .w3-bar:before, .w3-bar:after {
+	content: "";
+	display: table;
+	clear: both
+}
+.w3-third, .w3-twothird {
+	float: left;
+	width: 100%
+}
+@media (min-width:601px) {
+	.w3-third {
+		width: 33.33333%
+	}
+	.w3-twothird {
+		width: 66.66666%
+	}
+}
+@media (min-width:993px) {
+	.w3-hide-large {
+		display: none!important
+	}
+	.w3-sidebar.w3-collapse {
+		display: block!important
+	}
+}
+@media (max-width:992px) {
+	.w3-sidebar.w3-collapse {
+		display: none
+	}
+	.w3-main {
+		margin-left: 0!important;
+		margin-right: 0!important
+	}
+}
+.w3-overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2
+}
+.w3-container {
+	padding: 0.01em 16px
+}
+.w3-animate-left {
+	position: relative;
+	animation: animateleft 0.4s
+}
+@keyframes animateleft {
+	from {
+		left: -300px;
+		opacity: 0
+	}
+	to {
+		left: 0;
+		opacity: 1
+	}
+}
+.w3-large {
+	font-size: 18px!important
+}
+.w3-xlarge {
+	font-size: 24px!important
+}
+.w3-center {
+	text-align: center!important
+}
+.w3-border {
+	border: 1px solid #ccc!important
+}
+.w3-padding-large {
+	padding: 12px 24px!important
+}
+.w3-padding-32 {
+	padding-top: 32px!important;
+	padding-bottom: 32px!important
+}
+.w3-padding-64 {
+	padding-top: 64px!important;
+	padding-bottom: 64px!important
+}
+.w3-right {
+	float: right!important
+}
+.w3-button:hover {
+	color: #000!important;
+	background-color: #ccc!important
+}
+/* Colors */
+.w3-black, .w3-hover-black:hover {
+	color: #fff!important;
+	background-color: #000!important
+}
+.w3-text-teal {
+	color: #009688!important
+}
+.w3-theme-l5 {
+	color: #000 !important;
+	background-color: #f0f0f0 !important
+}
+.w3-theme-l2 {
+	color: #fff !important;
+	background-color: #666666 !important
+}
+.w3-theme-l1 {
+	color: #fff !important;
+	background-color: #333333 !important
+}
