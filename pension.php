@@ -38,11 +38,11 @@
     <nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">ΙΚΑ</a>
+				<a class="navbar-brand" href="/IKA/index.php">ΙΚΑ</a>
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li class="active">
-					<a href="#">Αρχική</a>
+					<a href="/IKA/pension.php">Σύνταξη</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
