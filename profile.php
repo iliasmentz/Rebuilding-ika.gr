@@ -41,31 +41,31 @@
 	<nav class="main-menu">
 		<ul>
 			<li>
-				<a href="http://justinfarrow.com"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Dashboard</span></a>
+				<a href="http://justinfarrow.com"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="#"><i class="fa fa-laptop fa-2x"></i> <span class="nav-text">UI Components</span></a>
+				<a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="#"><i class="fa fa-list fa-2x"></i> <span class="nav-text">Forms</span></a>
+				<a href="#"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="#"><i class="fa fa-folder-open fa-2x"></i> <span class="nav-text">Pages</span></a>
+				<a href="#"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-bar-chart-o fa-2x"></i> <span class="nav-text">Graphs and Statistics</span></a>
+				<a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-font fa-2x"></i> <span class="nav-text">Typography and Icons</span></a>
+				<a href="#"><i class="fa fa-wheelchair"></i> <span class="nav-text">Άτομα με ειδικές Αναπηρίες</span></a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-table fa-2x"></i> <span class="nav-text">Tables</span></a>
+				<a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-text">Ενημερώσεις</span></a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-map-marker fa-2x"></i> <span class="nav-text">Maps</span></a>
+				<a href="#"><i class="fa fa-question-circle-o"></i> <span class="nav-text">Συχνές Ερωτήσεις</span></a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-info fa-2x"></i> <span class="nav-text">Documentation</span></a>
+				<a href="#"><i class="fa fa-info fa-2x"></i> <span class="nav-text">Επικοινωνία</span></a>
 			</li>
 		</ul>
 	</nav>
