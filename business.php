@@ -96,7 +96,7 @@
 	    <section class="c-fi">
 	        <div class="c-fi-wrapper">
 	            <div class="c-fi-grid">
-													
+
 	                        <div class="c-fi-cell">
 	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/retirement/" style="background-image:url(./img/shakehands.jpg)">
 	                                <div class="c-fi-text">Εργοδοσία</div>
@@ -113,11 +113,7 @@
 	                                <div class="c-fi-text">Πρόσληψη σε εταιρία</div>
 	                            </a>
 	                        </div>
-													<div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(./img/woman.jpeg)">
-	                                <div class="c-fi-text">Ο λογαριάσμος μου</div>
-	                            </a>
-	                        </div>
+													
 	            </div>
 	        </div>
 	    </section>
