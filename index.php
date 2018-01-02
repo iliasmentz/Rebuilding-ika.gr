@@ -68,56 +68,30 @@
     </section>
 </div>
 
-<section class="bg-gray-100">
-    <div class="wrapper pt0 l-pb0">
+    <div class="sub-menu">
         <div class="m-row">
 
-          <div class="mb3 m-col m-fx m-ta-c m-w-50 l-w-25">
-            <a class="bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="Social Security Number" href="/ssnumber/">
+          <div class="mb3 m-col m-fx m-ta-c l-w-25">
+            <a class=" selection-sub-menu bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="Social Security Number" href="/ssnumber/">
               <img alt="" class="dn m-db mx-auto my3 svg6" src="./img/newsfeed.png">
               <p class="link-color fw5 mb2">Ενημερώσεις</p>
             </a>
           </div>
-          <div class="mb3 m-col m-fx m-ta-c m-w-50 l-w-25">
-              <a class="bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="my Social Security" href="/myaccount/">
+          <div class="mb3 m-col m-fx m-ta-c l-w-25">
+              <a class="selection-sub-menu bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="my Social Security" href="/myaccount/">
                   <img alt="" class="dn m-db mx-auto my3 svg6" src="./img/faq.png">
                   <p class="link-color fw5 mb2">Συχνές Ερωτήσεις</p>
+              </a>
         </div>
-          <div class="mb3 m-col m-fx m-ta-c m-mb0 m-w-50 l-w-25">
-            <a class="bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="Frequently Asked Questions" href="/ask/">
+          <div class="mb3 m-col m-fx m-ta-c m-mb0  l-w-25">
+            <a class="selection-sub-menu bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="Frequently Asked Questions" href="/ask/">
               <img alt="" class="dn m-db mx-auto my3 svg6" src="./img/contact.png">
               <p class="link-color fw5 mb2">Επικοινωνία</p>
             </a>
           </div>
         </div>
       </div>
-    </section>
 <!-- END MAIN -->
-
-<script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
-
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
-
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-    if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-        overlayBg.style.display = "none";
-    } else {
-        mySidebar.style.display = 'block';
-        overlayBg.style.display = "block";
-    }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-    overlayBg.style.display = "none";
-}
-</script>
 
 </body>
 </html>
