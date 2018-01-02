@@ -12,7 +12,8 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<link href="./css/other.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/other.css" >
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -69,5 +70,45 @@
 			</li>
 		</ul>
 	</nav>
+	<div class="container ">
+		<div class="row">
+			<h1>Ο λογαργιασμός μου</h1>
+		</div>
+		<div class="row">
+		      <div class="col-md-8">
+		          <h3>Τα Στοιχεία Μου</h3>
+		          <div class="well">
+		          	<p style="font-size: large;" th:inline="text">Όνομα: Απόστολος  <button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή</button></p>
+					<p style="font-size: large;" th:inline="text">Επώνυμο: Πλακιάς<button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή</button></p>
+					<p style="font-size: large;" th:inline="text">ΑΦΜ: 113211313<button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή</button></p>
+					<p style="font-size: large;" th:inline="text">E-mail: apostp@<button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή</button></p>
+		          </div>
+		    </div>
+		</div>
+		<div class="row">
+		      <div class="col-md-8">
+		          <h3>Ασφάλιση</h3>
+		          <div class="well">
+					  <p style="font-size: large;" th:inline="text">Κωδικός Ασφάλισης: 111</p>
+		          </div>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<h3>Εργοδότης</h3>
+				<div class="well">
+					<p style="font-size: large;" th:inline="text">Όνομα Εταιρείας: Γερμανός</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		      <div class="col-md-8">
+		          <h3>Σύνταξη</h3>
+		          <div class="well">
+					  <p style="font-size: large;" th:inline="text">Ποσό Σύνταξη: 111$</p>
+		          </div>
+		    </div>
+		</div>
+	</div>
 </body>
 </html>
