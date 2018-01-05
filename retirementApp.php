@@ -75,7 +75,91 @@
 	</nav>
 	<div class="container ">
 		<div class="row">
-			<h1>Ο λογαριασμός μου</h1>
+			<h1>Αίτημα συνταξιοδότησης</h1>
+		</div>
+		<div class="row">
+			<h3>Στοιχεία Αιτήματος</h3>
+		</br>
+			<div class="col-md-6">
+				<div class="well" id="wellratio">
+					<div class="row">
+						<label for="sel1" class="control-label col-sm-12">Συνταξιοδοτικός Φορέας</label>
+					</div>
+					<div class="row col-sm-6" >
+						<select class="form-control" id="sel1" name"sel1">
+							<option>ΙΚΑ-ΕΤΑΜ</option>
+							<option>ΙΚΑ</option>
+							<option>ΕΤΑΜ</option>
+						</select>
+					</div>
+					</br>
+					</br>
+					<div class="row">
+						<label for="sel2" class="control-label col-sm-12">Τύπος Σύνταξης</label>
+					</div>
+					<div class="row col-sm-6" >
+						<select class="form-control" id="sel2" name"sel2">
+							<option>Γεράματος</option>
+							<option>Αναπυρίας</option>
+							<option>Θάνατος Ασφαλισμένου</option>
+							<option>Θάνατος Συνταξιούχου</option>
+						</select>
+					</div>
+				</br>
+				</br>
+				</div>
+			</div>
+		      <div class="col-md-6">
+				  <div class="well" id="welledit">
+				  	<form class="" action="" method="get">
+						<div class="row">
+							<label class="control-label col-sm-12">Έτη εργασίας έως σήμερα:</label>
+						</div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="workage" placeholder="Έτη εργασίας" name="workage">
+                            </div>
+						</div>
+                        <br/>
+						<div class="row">
+							<label class="control-label col-sm-12">Μηνιαίες Αποδοχές Σήμερα:</label>
+						</div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="salary" placeholder="Αποδοχές" name="salary">
+                            </div>
+                        </div>
+                        <br/>
+						<div class="row">
+							<label class="control-label col-sm-12">Ημερομηνία Γέννησης</label>
+						</div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                    <input id="input-date" type="date" id="birthday" placeholder="ΜΜ/ηη/ΧΧΧΧ" name="birtdate">
+                            </div>
+                        </div>
+                        <br/>
+
+                        <div class="row">
+                            <label class="control-label col-sm-12">Ηλικία Συνταξιοδότησης</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <input type="number" min="55" max="70" class="form-control" id="age" placeholder="Ηλικία Συνταξιοδότησης" name="pension_age">
+                            </div>
+                        </div>
+						<br/>
+						<div class="row">
+							<div class="col-sm-6">
+								<button type="submit" class="btn btn-default">Υπολογισμός</button>
+							</div>
+							<div class="col-sm-2">
+								<button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>
+							</div>
+						</div>
+					</form>
+				  </div>
+		    </div>
 		</div>
 	</div>
 </body>
