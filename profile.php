@@ -12,21 +12,21 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="/ΙΚΑ/css/custom.css">
-    <link rel="stylesheet" href="/ΙΚΑ/css/other.css" >
+	<link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/other.css" >
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/IKA/">ΙΚΑ</a>
+				<a class="navbar-brand" href="./">ΙΚΑ</a>
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li class="active">
 					<a href="#">Ασφάλεια</a>
 				</li>
                 <li class="active">
-                    <a href="/IKA/profile.php">Ο Λογαριασμός μου</a>
+                    <a href="./profile.php">Ο Λογαριασμός μου</a>
                 </li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
@@ -37,7 +37,7 @@
 					<a href="#">Γλώσσα</a>
 				</li>
 				<li>
-					<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>
+					<a href="./login.php">Είσοδος/Έγγραφη</a>
 				</li>
 			</ul>
 		</div>
@@ -45,16 +45,16 @@
 	<nav class="main-menu">
 		<ul>
 			<li>
-				<a href="/IKA/"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
+				<a href="./"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
 			</li>
 			<li class="has-subnav">
 				<a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="/IKA/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+				<a href="./pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="/IKA/business.php"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
+				<a href="./business.php"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
 			</li>
 			<li>
 				<a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
