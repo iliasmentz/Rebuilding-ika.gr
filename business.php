@@ -103,14 +103,14 @@
 	                            </a>
 	                        </div>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/medicare/prescriptionhelp/" style="background-image:url(/IKA/img/home.jpg)">
-	                                <div class="c-fi-text">Πρόσληψη κατ´οίκον</div>
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/medicare/prescriptionhelp/" style="background-image:url(/IKA/img/index.jpeg)">
+	                                <div class="c-fi-text">Ηλεκτρονική Εκδοση Βεβαιώσεων</div>
 	                            </a>
 	                        </div>
 													<br/>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(/IKA/img/team.jpeg)">
-	                                <div class="c-fi-text">Πρόσληψη σε εταιρία</div>
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(/IKA/img/calc.jpg)">
+	                                <div class="c-fi-text">Υπολογισμός ενσήμων</div>
 	                            </a>
 	                        </div>
 
