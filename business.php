@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Επιχειρήσεις</title>
+	<title>Business</title>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">

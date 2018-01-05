@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home Page</title>
+	<title>Profile</title>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
@@ -90,21 +90,21 @@
 				  <div class="well" style="display:none;" id="welledit">
 				  	<form class="" action="" method="get">
 						<div class="row">
-							<label class="control-label col-sm-2" for="pwd">Όνομα:</label>
+							<label class="control-label col-sm-2">Όνομα:</label>
 							<div class="col-sm-6">
 								<input type="text" class="form-control" id="name" placeholder="Αλλαγή Ονόματος" name="name">
 							</div>
 						</div>
 						<br/>
 						<div class="row">
-							<label class="control-label col-sm-2" for="pwd">Επίθετο:</label>
+							<label class="control-label col-sm-2">Επίθετο:</label>
 							<div class="col-sm-6">
 								<input type="text" class="form-control" id="surname" placeholder="Αλλαγή Επίθετου" name="surname">
 							</div>
 						</div>
 						<br/>
 						<div class="row">
-							<label class="control-label col-sm-2" for="pwd">Email:</label>
+							<label class="control-label col-sm-2">Email:</label>
 							<div class="col-sm-6">
 								<input type="email" class="form-control" id="email" placeholder="Αλλαγή Email" name="email">
 							</div>

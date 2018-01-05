@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>W3.CSS Template</title>
+    <title>Retirement</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -116,7 +116,7 @@
                             </a>
                         </div>
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(/IKA/img/request.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/retirementApp.php" style="background-image:url(/IKA/img/request.jpg)">
                                 <div class="c-fi-text">Ηλεκτρονική Υποβολή <br/>Αίτησης Συνταξιοδότησης</div>
                             </a>
                         </div>
