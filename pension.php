@@ -111,7 +111,7 @@
                             </a>
                         </div>
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/medicare/prescriptionhelp/" style="background-image:url(/IKA/img/calculating.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/pension_calc.php" style="background-image:url(/IKA/img/calculating.jpg)">
                                 <div class="c-fi-text">Υπολογισμός Σύνταξης</div>
                             </a>
                         </div>

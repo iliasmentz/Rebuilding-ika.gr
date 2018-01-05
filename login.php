@@ -17,9 +17,9 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="/ΙΚΑ/css/login.css">
-      <link rel="stylesheet" href="/ΙΚΑ/css/custom.css">
-      <link rel="stylesheet" href="/ΙΚΑ/css/other.css" >
+    <link rel="stylesheet" href="./css/login.css">
+      <link rel="stylesheet" href="./css/custom.css">
+      <link rel="stylesheet" href="./css/other.css" >
 
 </head>
 
@@ -122,7 +122,7 @@
                     <input type="password"required autocomplete="off"/>
                   </div>
 
-                  <button type="submit" class="button button-block"/>Εγγραφή</button>
+                  <button type="submit" class="button button-block"/>Εγγραφη</button>
 
                   </form>
 
@@ -149,7 +149,7 @@
 
                   <p class="forgot"><a href="#">Ξεχάσατε τον κωδικό σας;</a></p>
 
-                  <button class="button button-block"/>Σύνδεση</button>
+                  <button class="button button-block"/>Συνδεση</button>
 
                   </form>
 
