@@ -37,8 +37,8 @@
 
     <nav class="navbar navbar-inverse">
 		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="/IKA/index.php">ΙΚΑ</a>
+            <div class="navbar-header">
+				<a class="navbar-brand" href="/IKA/">ΙΚΑ</a>
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li class="active">
@@ -59,35 +59,35 @@
 		</div>
 	</nav>
 	<nav class="main-menu">
-		<ul>
-			<li>
-				<a href="/IKA/index.php"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
-			</li>
-			<li class="has-subnav">
-				<a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
-			</li>
-			<li class="has-subnav">
-				<a href="#"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
-			</li>
-			<li class="has-subnav">
-				<a href="#"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
-			</li>
-			<li>
-				<a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
-			</li>
-			<li>
-				<a href="#"><i class="fa fa-wheelchair"></i> <span class="nav-text">Άτομα με ειδικές Αναπηρίες</span></a>
-			</li>
-			<li>
-				<a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-text">Ενημερώσεις</span></a>
-			</li>
-			<li>
-				<a href="#"><i class="fa fa-question-circle-o"></i> <span class="nav-text">Συχνές Ερωτήσεις</span></a>
-			</li>
-			<li>
-				<a href="#"><i class="fa fa-info fa-2x"></i> <span class="nav-text">Επικοινωνία</span></a>
-			</li>
-		</ul>
+        <ul>
+            <li>
+                <a href="/IKA/"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
+            </li>
+            <li class="has-subnav">
+                <a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
+            </li>
+            <li class="has-subnav">
+                <a href="/IKA/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+            </li>
+            <li class="has-subnav">
+                <a href="/IKA/business.php"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-wheelchair"></i> <span class="nav-text">Άτομα με ειδικές Αναπηρίες</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-text">Ενημερώσεις</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-question-circle-o"></i> <span class="nav-text">Συχνές Ερωτήσεις</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-info fa-2x"></i> <span class="nav-text">Επικοινωνία</span></a>
+            </li>
+        </ul>
 	</nav>
 
 <div class="mymenu">

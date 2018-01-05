@@ -42,12 +42,12 @@
                 <div class="c-fi-cell">
                     <div class="c-fi-grid nested">
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/disability/" style="background-image:url(./img/pension-cover.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/pension.php/" style="background-image:url(./img/pension-cover.jpg)">
                                 <div class="c-fi-text">Σύνταξη</div>
                             </a>
                         </div>
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/retirement/" style="background-image:url(./img/work-cover.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/business.php/" style="background-image:url(./img/work-cover.jpg)">
                                 <div class="c-fi-text">Εργοδοσία</div>
                             </a>
                         </div>

@@ -34,8 +34,8 @@
 <body>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">ΙΚΑ</a>
+            <div class="navbar-header">
+				<a class="navbar-brand" href="/IKA/">ΙΚΑ</a>
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li class="active">
@@ -56,18 +56,18 @@
 		</div>
 	</nav>
 	<nav class="main-menu">
-		<ul>
+        <ul>
 			<li>
-				<a href="http://justinfarrow.com"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
+				<a href="/IKA/"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
 			</li>
 			<li class="has-subnav">
 				<a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="#"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+				<a href="/IKA/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="#"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
+				<a href="/IKA/business.php"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
 			</li>
 			<li>
 				<a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
@@ -113,7 +113,7 @@
 	                                <div class="c-fi-text">Πρόσληψη σε εταιρία</div>
 	                            </a>
 	                        </div>
-													
+
 	            </div>
 	        </div>
 	    </section>
