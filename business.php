@@ -12,8 +12,8 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="./css/custom.css">
-	<link href="./css/other.css" rel="stylesheet">
+	<link rel="stylesheet" href="/IKA/css/custom.css">
+	<link href="/IKA/css/other.css" rel="stylesheet">
   <style>
   div.relative {
     position: relative;
@@ -43,14 +43,14 @@
 				</li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
-				<li>
+                <li>
 					<a href="#">Αναζήτηση</a>
 				</li>
 				<li>
 					<a href="#">Γλώσσα</a>
 				</li>
 				<li>
-					<a href="#">Είσοδος/Έγγραφη</a>
+					<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>
 				</li>
 			</ul>
 		</div>
@@ -98,18 +98,18 @@
 	            <div class="c-fi-grid">
 
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/retirement/" style="background-image:url(./img/shakehands.jpg)">
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/retirement/" style="background-image:url(/IKA/img/shakehands.jpg)">
 	                                <div class="c-fi-text">Εργοδοσία</div>
 	                            </a>
 	                        </div>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/medicare/prescriptionhelp/" style="background-image:url(./img/home.jpg)">
-	                                <div class="c-fi-text">Πρόσληψη κατ´οικον</div>
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/medicare/prescriptionhelp/" style="background-image:url(/IKA/img/home.jpg)">
+	                                <div class="c-fi-text">Πρόσληψη κατ´οίκον</div>
 	                            </a>
 	                        </div>
 													<br/>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(./img/team.jpeg)">
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(/IKA/img/team.jpeg)">
 	                                <div class="c-fi-text">Πρόσληψη σε εταιρία</div>
 	                            </a>
 	                        </div>

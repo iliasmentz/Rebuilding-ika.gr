@@ -17,9 +17,9 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="./css/login.css">
-      <link rel="stylesheet" href="./css/custom.css">
-      <link rel="stylesheet" href="./css/other.css" >
+    <link rel="stylesheet" href="/ΙΚΑ/css/login.css">
+      <link rel="stylesheet" href="/ΙΚΑ/css/custom.css">
+      <link rel="stylesheet" href="/ΙΚΑ/css/other.css" >
 
 </head>
 
@@ -36,14 +36,14 @@
             </ul>
             <ul class="nav navbar-nav mynavbar">
                 <li>
-                    <a href="#">Αναζήτηση</a>
-                </li>
-                <li>
-                    <a href="#">Γλώσσα</a>
-                </li>
-                <li>
-                    <a href="#">Είσοδος/Έγγραφη</a>
-                </li>
+					<a href="#">Αναζήτηση</a>
+				</li>
+				<li>
+					<a href="#">Γλώσσα</a>
+				</li>
+				<li>
+					<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>
+				</li>
             </ul>
         </div>
     </nav>

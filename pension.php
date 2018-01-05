@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/custom.css">
-    <link rel="stylesheet" href="./css/other.css" >
+    <link rel="stylesheet" href="/IKA/css/custom.css">
+    <link rel="stylesheet" href="/IKA/css/other.css" >
 
     <style>
     html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
@@ -46,14 +46,14 @@
 				</li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
-				<li>
+                <li>
 					<a href="#">Αναζήτηση</a>
 				</li>
 				<li>
 					<a href="#">Γλώσσα</a>
 				</li>
 				<li>
-					<a href="#">Είσοδος/Έγγραφη</a>
+					<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>
 				</li>
 			</ul>
 		</div>
@@ -106,17 +106,17 @@
             <div class="c-fi-grid">
 
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/retirement/" style="background-image:url(./img/certificate.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/retirement/" style="background-image:url(/IKA/img/certificate.jpg)">
                                 <div class="c-fi-text">Βεβαίωση Σύνταξης</div>
                             </a>
                         </div>
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/medicare/prescriptionhelp/" style="background-image:url(./img/calculating.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/medicare/prescriptionhelp/" style="background-image:url(/IKA/img/calculating.jpg)">
                                 <div class="c-fi-text">Υπολογισμός Σύνταξης</div>
                             </a>
                         </div>
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(./img/request.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(/IKA/img/request.jpg)">
                                 <div class="c-fi-text">Ηλεκτρονική Υποβολή <br/>Αίτησης Συνταξιοδότησης</div>
                             </a>
                         </div>
