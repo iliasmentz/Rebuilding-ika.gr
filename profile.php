@@ -80,12 +80,46 @@
 		<div class="row">
 		      <div class="col-md-8">
 		          <h3>Τα Στοιχεία Μου</h3>
-		          <div class="well">
-		          	<p style="font-size: large;" th:inline="text">Όνομα: Απόστολος  <button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή</button></p>
-					<p style="font-size: large;" th:inline="text">Επώνυμο: Πλακιάς<button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή</button></p>
-					<p style="font-size: large;" th:inline="text">ΑΦΜ: 113211313<button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή</button></p>
-					<p style="font-size: large;" th:inline="text">E-mail: apostp@<button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή</button></p>
+		          <div class="well" id="wellinfo">
+		          	<p style="font-size: large;" th:inline="text">Όνομα: Απόστολος </p>
+					<p style="font-size: large;" th:inline="text">Επώνυμο: Πλακιάς</p>
+					<p style="font-size: large;" th:inline="text">ΑΦΜ: 113211313</p>
+					<p style="font-size: large;" th:inline="text">E-mail: apostp@</p>
+					<button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή Στοιχείων</button>
 		          </div>
+				  <div class="well" style="display:none;" id="welledit">
+				  	<form class="" action="" method="get">
+						<div class="row">
+							<label class="control-label col-sm-2" for="pwd">Όνομα:</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="name" placeholder="Αλλαγή Ονόματος" name="name">
+							</div>
+						</div>
+						<br/>
+						<div class="row">
+							<label class="control-label col-sm-2" for="pwd">Επίθετο:</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="surname" placeholder="Αλλαγή Επίθετου" name="surname">
+							</div>
+						</div>
+						<br/>
+						<div class="row">
+							<label class="control-label col-sm-2" for="pwd">Email:</label>
+							<div class="col-sm-6">
+								<input type="email" class="form-control" id="email" placeholder="Αλλαγή Email" name="email">
+							</div>
+						</div>
+						<br/>
+						<div class="row">
+							<div class="col-sm-6">
+								<button type="submit" class="btn btn-default">Υποβολή</button>
+							</div>
+							<div class="col-sm-2">
+								<button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>
+							</div>
+						</div>
+					</form>
+				  </div>
 		    </div>
 		</div>
 		<div class="row">
@@ -114,4 +148,18 @@
 		</div>
 	</div>
 </body>
+
+<script>
+function hide_auto(){
+		document.getElementById("welledit").style.display="none";
+		document.getElementById("nochange").style.display="block";
+		document.getElementById("wellinfo").style.display="block";
+}
+
+function show_auto(){
+		document.getElementById("welledit").style.display="block";
+		document.getElementById("nochange").style.display="none";
+		document.getElementById("wellinfo").style.display="none";
+}
+</script>
 </html>
