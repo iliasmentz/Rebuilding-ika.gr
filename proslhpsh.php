@@ -91,7 +91,6 @@
                         </div>
                      </div>
                      <br/>
-                     <div class="row">
                         <div class="row">
                            <label class="control-label col-sm-4">Επίθετο Εργαζομένου:</label>
                         </div>
@@ -101,8 +100,9 @@
                            </div>
                         </div>
                         <br/>
+                    <div class="row">
                         <label class="control-label col-sm-4">Ημέρες Εργασίας:</label>
-                     </div>
+                    </div>
                      <div class="row">
                         <div class="col-sm-6">
                            <input type="text" class="form-control" id="workage" placeholder="Ημέρες" name="workage">
