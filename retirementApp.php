@@ -80,13 +80,14 @@
 		<div class="row">
 			<h3>Στοιχεία Αιτήματος</h3>
 		</br>
+		<form class="" action="" method="get">
 			<div class="col-md-6">
 				<div class="well" id="wellratio">
 					<div class="row">
 						<label for="sel1" class="control-label col-sm-12">Συνταξιοδοτικός Φορέας</label>
 					</div>
-					<div class="row col-sm-6" >
-						<select class="form-control" id="sel1" name"sel1">
+					<div class="row col-sm-8" >
+						<select class="form-control" id="sel1" name="sel1">
 							<option>ΙΚΑ-ΕΤΑΜ</option>
 							<option>ΙΚΑ</option>
 							<option>ΕΤΑΜ</option>
@@ -97,69 +98,119 @@
 					<div class="row">
 						<label for="sel2" class="control-label col-sm-12">Τύπος Σύνταξης</label>
 					</div>
-					<div class="row col-sm-6" >
-						<select class="form-control" id="sel2" name"sel2">
+					<div class="row col-sm-8" >
+						<select class="form-control" id="sel2" name="sel2">
 							<option>Γεράματος</option>
 							<option>Αναπυρίας</option>
 							<option>Θάνατος Ασφαλισμένου</option>
 							<option>Θάνατος Συνταξιούχου</option>
 						</select>
 					</div>
-				</br>
-				</br>
+					</br>
+					</br>
+					<div class="row">
+						<label for="sel2" class="control-label col-sm-12">Τύπος Εγγράφου</label>
+					</div>
+					<div class="row col-sm-8" >
+						<select class="form-control" id="sel3" name="sel3">
+							<option>Ταυτότητα</option>
+							<option>Διαβατήριο</option>
+						</select>
+					</div>
+					</br>
+					</br>
+					<div class="row">
+						<label class="control-label col-sm-12">Αριθμός Εγγράφου:</label>
+					</div>
+					<div class="row">
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="document" placeholder="ΑΙ1212" name="document">
+						</div>
+					</div>
+					<br/>
+					<div class="row">
+						<label class="control-label col-sm-6">Νομός:</label>
+						<label class="control-label col-sm-6">Πόλη:</label>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="region" placeholder="Αττική" name="region">
+						</div>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="city" placeholder="Αθήνα" name="city">
+						</div>
+					</div>
+					<br/>
+					<div class="row">
+						<label class="control-label col-sm-8">Οδός:</label>
+						<label class="control-label col-sm-2">Αριθμός:</label>
+					</div>
+					<div class="row">
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="street" placeholder="Ευδόξου" name="document">
+						</div>
+						<div class="col-sm-3">
+							<input type="number" min="1"  class="form-control" id="streetnumber" placeholder="13" name="streetnumber">
+						</div>
+					</div>
+					<br/>
 				</div>
 			</div>
 		      <div class="col-md-6">
 				  <div class="well" id="welledit">
-				  	<form class="" action="" method="get">
+					  <div class="row">
+						  <label class="control-label col-sm-12">Ημερομηνία Γέννησης</label>
+					  </div>
+					  <div class="row">
+						  <div class="col-sm-6">
+								  <input id="input-date" type="date" id="birthday" placeholder="ΜΜ/ηη/ΧΧΧΧ" name="birtdate">
+						  </div>
+					  </div>
+					  <br/>
 						<div class="row">
-							<label class="control-label col-sm-12">Έτη εργασίας έως σήμερα:</label>
+							<label class="control-label col-sm-12">ΑΦΜ:</label>
 						</div>
                         <div class="row">
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="workage" placeholder="Έτη εργασίας" name="workage">
+                                <input type="text" class="form-control" id="afm" placeholder="ΑΦΜ" name="afm">
                             </div>
 						</div>
                         <br/>
 						<div class="row">
-							<label class="control-label col-sm-12">Μηνιαίες Αποδοχές Σήμερα:</label>
+							<label class="control-label col-sm-12">AMKA:</label>
 						</div>
                         <div class="row">
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="salary" placeholder="Αποδοχές" name="salary">
+                                <input type="text" class="form-control" id="amka" placeholder="ΑΜΚΑ" name="amka">
                             </div>
                         </div>
                         <br/>
 						<div class="row">
-							<label class="control-label col-sm-12">Ημερομηνία Γέννησης</label>
+							<label class="control-label col-sm-12">Επώνυμο:</label>
 						</div>
                         <div class="row">
                             <div class="col-sm-8">
-                                    <input id="input-date" type="date" id="birthday" placeholder="ΜΜ/ηη/ΧΧΧΧ" name="birtdate">
+                                <input type="text" class="form-control" id="surname" placeholder="Πλακιάς" name="surname">
                             </div>
                         </div>
                         <br/>
-
-                        <div class="row">
-                            <label class="control-label col-sm-12">Ηλικία Συνταξιοδότησης</label>
-                        </div>
+						<div class="row">
+							<label class="control-label col-sm-12">Όνομα:</label>
+						</div>
                         <div class="row">
                             <div class="col-sm-8">
-                                <input type="number" min="55" max="70" class="form-control" id="age" placeholder="Ηλικία Συνταξιοδότησης" name="pension_age">
+                                <input type="text" class="form-control" id="onoma" placeholder="Απόστολος" name="onoma">
                             </div>
                         </div>
-						<br/>
+                        <br/>
 						<div class="row">
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-default">Υπολογισμός</button>
-							</div>
-							<div class="col-sm-2">
-								<button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>
+								<button type="submit" class="btn btn-default">Υποβολή Αιτήματος</button>
 							</div>
 						</div>
-					</form>
 				  </div>
 		    </div>
+		</form>
 		</div>
 	</div>
 </body>
