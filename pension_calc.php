@@ -77,11 +77,43 @@
 		<div class="row">
 			<h1>Υπολογισμός Σύνταξης</h1>
 		</div>
+        <div class="row">
+        <h3>Στοιχεία Μελλοντικού Συνταξιούχου</h3>
+        </br>
+        <form class="" action="" method="get">
+
 		<div class="row">
-		      <div class="col-md-8">
-		          <h3>Στοιχεία Μελλοντικού Συνταξιούχου</h3>
+            <div class="col-md-6">
+				<div class="well" id="wellratio">
+					<div class="row">
+						<label for="sel1" class="control-label col-sm-12">Συνταξιοδοτικός Φορέας</label>
+					</div>
+					<div class="row col-sm-6" >
+						<select class="form-control" id="sel1" name="sel1">
+							<option>ΙΚΑ-ΕΤΑΜ</option>
+							<option>ΙΚΑ</option>
+							<option>ΕΤΑΜ</option>
+						</select>
+					</div>
+					</br>
+					</br>
+					<div class="row">
+						<label for="sel2" class="control-label col-sm-12">Τύπος Σύνταξης</label>
+					</div>
+					<div class="row col-sm-6" >
+						<select class="form-control" id="sel2" name="sel2">
+							<option>Γεράματος</option>
+							<option>Αναπυρίας</option>
+							<option>Θάνατος Ασφαλισμένου</option>
+							<option>Θάνατος Συνταξιούχου</option>
+						</select>
+					</div>
+				</br>
+				</br>
+				</div>
+			</div>
+		      <div class="col-md-6">
 				  <div class="well" id="welledit">
-				  	<form class="" action="" method="get">
 						<div class="row">
 							<label class="control-label col-sm-4">Έτη εργασίας έως σήμερα:</label>
 						</div>
@@ -105,7 +137,7 @@
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
-                                    <input id="input-date" type="date" id="birthday" placeholder="ΜΜ/ηη/ΧΧΧΧ" name="birtdate">
+                                    <input id="input-date" type="date" id>
                             </div>
                         </div>
                         <br/>
@@ -127,10 +159,10 @@
 								<button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>
 							</div>
 						</div>
-					</form>
 				  </div>
 		    </div>
 		</div>
+    </form>
 
 	</div>
 </body>
