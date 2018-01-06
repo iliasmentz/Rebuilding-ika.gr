@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en"	xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
   <head>
     <title>Receipt</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
@@ -23,41 +22,39 @@
       <hr/>
       <br/>
       <div class="container">
-            <p th:inline="text">
+            <p >
                 <div style="font-size: small">
-                    Ημερομηνία [[${trans.timeStamp}]]
+                    ΥΠΟΚΑΤΑΣΤΗΜΑ :
                 </div>
             </p>
-            <p th:inline="text">
-                <th:block th:if="${trans.moneyPayed}>0">
+            <p >
                 <div style="font-size: small">
-                    Είδος Συναλλαγής : Κατάθεση Χρημάτων στον Ιστότοπο.
-                </div>
-                </th:block>
-                <th:block th:unless="${trans.moneyPayed}>0">
-                <div style="font-size: small">
-                    Είδος Συναλλαγής : Ανάληψη Χρημάτων από τον Ιστότοπο.
-                </div>
-                </th:block>
-            </p>
-            <p th:inline="text">
-                <div style="font-size: small">
-                    Αριθμός Συναλλαγής : [[${trans.transactionId}]]
+                    ΚΑΤΗΓΟΡΙΑ :
                 </div>
             </p>
-            <p th:inline="text">
+            <p>
                 <div style="font-size: small">
-                    Όνομα : [[${trans.organiser.surname}]] [[${trans.organiser.name}]]
+                    Α.Μ.Κ.Α. :
                 </div>
             </p>
-            <p th:inline="text">
+            <p >
                 <div style="font-size: small">
-                    Αιτιολογία : [[${trans.message}]]
+                    Α.Φ.Μ. :
                 </div>
             </p>
-            <p th:inline="text">
+            <p >
                 <div style="font-size: small">
-                    Ποσό : [[${trans.moneyPayed/100}]]
+                    ΟΝΟΜΑΤΕΠΩΝΥΜΟ :
+                </div>
+            </p>
+            <p >
+                <div style="font-size: small">
+                    ΤΑΧΥΔΡΟΜΙΚΗ ΔΙΕΥΘΥΝΣΗ :
+                </div>
+            </p>
+            <p >
+                <div style="font-size: small">
+                    ΠΟΣΟ ΣΥΝΤΑΞΗΣ :
                 </div>
             </p>
       </div>
