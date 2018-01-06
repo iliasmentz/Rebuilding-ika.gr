@@ -114,12 +114,21 @@
 			</div>
 		      <div class="col-md-6">
 				  <div class="well" id="welledit">
+					  <div class="row">
+						  <label class="control-label col-sm-4">Ημερομηνία Γέννησης</label>
+					  </div>
+					  <div class="row">
+						  <div class="col-sm-6">
+							  <input id="input-date" type="date" value="1996-04-09">
+						  </div>
+					  </div>
+					  <br/>
 						<div class="row">
 							<label class="control-label col-sm-4">Έτη εργασίας έως σήμερα:</label>
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="workage" placeholder="Έτη εργασίας" name="workage">
+                                <input type="number" class="form-control" id="workage" placeholder="Έτη εργασίας" name="workage">
                             </div>
 						</div>
                         <br/>
@@ -128,16 +137,7 @@
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="salary" placeholder="Αποδοχές" name="salary">
-                            </div>
-                        </div>
-                        <br/>
-						<div class="row">
-							<label class="control-label col-sm-4">Ημερομηνία Γέννησης</label>
-						</div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                    <input id="input-date" type="date" value="1996-04-09">
+                                <input type="number" class="form-control" id="salary" placeholder="Αποδοχές" name="salary">
                             </div>
                         </div>
                         <br/>

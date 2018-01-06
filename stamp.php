@@ -114,7 +114,7 @@
                     </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="workage" placeholder="Ημέρες" name="workage">
+                           <input type="number" class="form-control" id="workage" placeholder="Ημέρες" name="workage">
                         </div>
                      </div>
                      <br/>
@@ -123,7 +123,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="salary" placeholder="Αξία" name="salary">
+                           <input type="number" class="form-control" id="salary" placeholder="Αξία" name="salary">
                         </div>
                      </div>
                      <br/>
