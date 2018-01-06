@@ -137,7 +137,7 @@
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
-                                    <input id="input-date" type="date" id>
+                                    <input id="input-date" type="date" >
                             </div>
                         </div>
                         <br/>

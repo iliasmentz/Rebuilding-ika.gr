@@ -39,7 +39,7 @@
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li class="active">
-					<a href="#">Αρχική</a>
+					<a href="#">Εργοδοσία</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
@@ -67,7 +67,7 @@
 				<a href="/IKA/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="/IKA/business.php"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
+				<a href="/IKA/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
 			</li>
 			<li>
 				<a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
@@ -88,10 +88,15 @@
 	</nav>
 
 	<div class="mymenu">
-	    <h1 style="text-align:center;"> Επιχειρήσεις </h1>
-	    <br/>
-	    <br/>
-	    <br/>
+	    <h1 style="text-align:center;"> Εργοδοσία </h1>
+        <br/>
+        <br/>
+        <p style="text-align:center;"><i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</i></p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
 
 	    <section class="c-fi">
 	        <div class="c-fi-wrapper">
@@ -109,8 +114,8 @@
 	                        </div>
 													<br/>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(/IKA/img/calc.jpg)">
-	                                <div class="c-fi-text">Υπολογισμός ενσήμων</div>
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/hire.php" style="background-image:url(/IKA/img/calc.jpg)">
+	                                <div class="c-fi-text">Πρόσληψη Εργαζόμενου</div>
 	                            </a>
 	                        </div>
 
