@@ -108,7 +108,7 @@
 	                            </a>
 	                        </div>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/medicare/prescriptionhelp/" style="background-image:url(/IKA/img/index.jpeg)">
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" target="_blank" href="/IKA/work_certificate.php" style="background-image:url(/IKA/img/index.jpeg)">
 	                                <div class="c-fi-text">Ηλεκτρονική Εκδοση Βεβαιώσεων</div>
 	                            </a>
 	                        </div>

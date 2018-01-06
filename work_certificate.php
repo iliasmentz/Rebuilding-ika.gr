@@ -14,7 +14,7 @@
           <p style="size text-align:left;">
               <div style="font-size: medium">
                   <img style="height: 120px; width: 200px;"src="/IKA/img/ika.jpg" alt="IKA">
-                  <span style="font-size: 200%; float:right;">Βεβαίωση Σύνταξης</span>
+                  <span style="font-size: 200%; float:right;">Βεβαίωση Εργοδοσίας</span>
               </div>
           </p>
       </div>
@@ -22,14 +22,22 @@
       <hr/>
       <br/>
       <div class="container">
+          <h3>Στοιχεία Εργοδότη</h3>
             <p >
                 <div style="font-size: small">
-                    ΥΠΟΚΑΤΑΣΤΗΜΑ :
+                    ΕΠΩΝΥΜΟ ΕΡΓΟΔΟΤΗ :
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    ΚΑΤΗΓΟΡΙΑ :
+                    Α.Φ.Μ. ΕΡΓΟΔΟΤΗ:
+                </div>
+            </p>
+            <br/>
+            <h3>Στοιχεία Εργαζομένου </h3>
+            <p >
+                <div style="font-size: small">
+                    ΟΝΟΜΑΤΕΠΩΝΥΜΟ :
                 </div>
             </p>
             <p>
@@ -44,17 +52,22 @@
             </p>
             <p >
                 <div style="font-size: small">
-                    ΟΝΟΜΑΤΕΠΩΝΥΜΟ :
+                    ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ :
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    ΤΑΧΥΔΡΟΜΙΚΗ ΔΙΕΥΘΥΝΣΗ :
+                    ΩΡΕΣ ΕΡΓΑΣΙΑΣ :
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    ΠΟΣΟ ΣΥΝΤΑΞΗΣ :
+                    ΚΥΡΙΑΚΕΣ :
+                </div>
+            </p>
+            <p >
+                <div style="font-size: small">
+                    ΑΠΟΔΟΧΕΣ :
                 </div>
             </p>
       </div>
