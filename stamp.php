@@ -21,10 +21,10 @@
             </div>
             <ul class="nav navbar-nav homenav">
                <li >
-                  <a href="/IKA/pension.php">Σύνταξη</a>
+                  <a href="/IKA/business.php">Εργοδοσία</a>
                </li>
                <li class="active">
-                  <a href="/IKA/profile.php">Υπολογισμός Σύνταξης</a>
+                  <a href="/IKA/stamp.php">Απόδοση Ενσυμάτων</a>
                </li>
             </ul>
             <ul class="nav navbar-nav mynavbar">
@@ -52,7 +52,7 @@
                <a href="./pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
             </li>
             <li class="has-subnav">
-               <a href="./business.php"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
+               <a href="./business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
             </li>
             <li>
                <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>

@@ -39,11 +39,7 @@
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li class="active">
-<<<<<<< HEAD
 					<a href="/IKA/business.php">Εργοδοσία</a>
-=======
-					<a href="#">Εργοδοσία</a>
->>>>>>> 415d03cfa4e252e624d3d14e0a2150e58937c605
 				</li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
@@ -118,7 +114,7 @@
 	                        </div>
 													<br/>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/hire.php" style="background-image:url(/IKA/img/calc.jpg)">
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/stamp.php" style="background-image:url(/IKA/img/calc.jpg)">
 	                                <div class="c-fi-text">Πρόσληψη Εργαζόμενου</div>
 	                            </a>
 	                        </div>

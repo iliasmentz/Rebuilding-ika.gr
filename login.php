@@ -59,7 +59,7 @@
 				<a href="/IKA/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="/IKA/business.php"><i class="fa fa-building"></i> <span class="nav-text">Επιχειρήσεις</span></a>
+				<a href="/IKA/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
 			</li>
 			<li>
 				<a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
