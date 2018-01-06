@@ -106,7 +106,7 @@
             <div class="c-fi-grid">
 
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/retirement/" style="background-image:url(/IKA/img/certificate.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/pension_certificate.php" target="_blank" style="background-image:url(/IKA/img/certificate.jpg)">
                                 <div class="c-fi-text">Βεβαίωση Σύνταξης</div>
                             </a>
                         </div>
