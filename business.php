@@ -39,7 +39,7 @@
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li class="active">
-					<a href="#">Αρχική</a>
+					<a href="/IKA/business.php">Εργοδοσία</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
@@ -109,7 +109,7 @@
 	                        </div>
 													<br/>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(/IKA/img/calc.jpg)">
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="IKA/proslhpsh.php" style="background-image:url(/IKA/img/calc.jpg)">
 	                                <div class="c-fi-text">Υπολογισμός ενσήμων</div>
 	                            </a>
 	                        </div>

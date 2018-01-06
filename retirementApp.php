@@ -160,9 +160,9 @@
                         <label class="control-label col-sm-12">Ημερομηνία Γέννησης</label>
                      </div>
                      <div class="row">
-                        <div class="col-sm-6">
-                           <input id="input-date" type="date" id="birthday" placeholder="ΜΜ/ηη/ΧΧΧΧ" name="birtdate">
-                        </div>
+                         <div class="col-sm-6">
+                             <input id="input-date" type="date" value="1996-04-09">
+                         </div>
                      </div>
                      <br/>
                      <div class="row">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home Page</title>
+	<title>Pension Calculator</title>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
@@ -137,7 +137,7 @@
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
-                                    <input id="input-date" type="date" id>
+                                    <input id="input-date" type="date" value="1996-04-09">
                             </div>
                         </div>
                         <br/>
