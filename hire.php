@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Υποβολή αίτησης απόδοσης ενσημάτων</title>
+      <title>Πρόσληψη Εργαζομένου</title>
       <meta charset="UTF-8">
       <meta content="width=device-width, initial-scale=1" name="viewport">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -10,21 +10,21 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
       <!-- Latest compiled and minified CSS -->
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="/IKA/css/custom.css">
-      <link rel="stylesheet" href="/IKA/css/other.css" >
+      <link rel="stylesheet" href="./css/custom.css">
+      <link rel="stylesheet" href="./css/other.css" >
    </head>
    <body>
       <nav class="navbar navbar-inverse">
          <div class="container-fluid">
             <div class="navbar-header">
-               <a class="navbar-brand" href="/IKA/">ΙΚΑ</a>
+               <a class="navbar-brand" href="./">ΙΚΑ</a>
             </div>
             <ul class="nav navbar-nav homenav">
                <li >
                   <a href="/IKA/business.php">Εργοδοσία</a>
                </li>
                <li class="active">
-                  <a href="/IKA/stamp.php">Υπολογισμός Ενσήμων</a>
+                  <a href="/IKA/stamp.php">Απόδοση Ενσυμάτων</a>
                </li>
             </ul>
             <ul class="nav navbar-nav mynavbar">
@@ -35,7 +35,7 @@
                   <a href="#">Γλώσσα</a>
                </li>
                <li>
-                  <a href="/IKA/login.php">Είσοδος/Έγγραφη</a>
+                  <a href="./login.php">Είσοδος/Έγγραφη</a>
                </li>
             </ul>
          </div>
@@ -43,16 +43,16 @@
       <nav class="main-menu">
          <ul>
             <li>
-               <a href="/IKA/"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
+               <a href="./"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
             </li>
             <li class="has-subnav">
                <a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
             </li>
             <li class="has-subnav">
-               <a href="/IKA/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+               <a href="./pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
             </li>
             <li class="has-subnav">
-               <a href="/IKA/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
+               <a href="./business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
             </li>
             <li>
                <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
@@ -73,15 +73,30 @@
       </nav>
       <div class="container ">
          <div class="row">
-            <h1>Υποβολή αίτησης απόδοσης ενσημάτων</h1>
+            <h1>Πρόσληψη Εργαζόμενου</h1>
             </br>
             </br>
          </div>
          <div class="row">
             <div class="col-md-8">
                <h3>Στοιχεία εργαζομένου</h3>
-               <div class="well" id="welledit">
-                  <form class="" action="" method="get">
+
+               <form class="" action="" method="get">
+                  <div class="well" id="welledit">
+
+                      <div class="row">
+                          <label for="sel1" class="control-label col-sm-12">Τύπος Πρόσληψης</label>
+                      </div>
+                      <div class="row col-sm-4" >
+                          <select class="form-control" id="sel1" name="sel1">
+                              <option>Πρόσληψη σε Εταιρία</option>
+                              <option>Κατ'οίκον Πρόσληψη</option>
+                          </select>
+                      </div>
+                    </br>
+                    </br>
+                    </br>
+
                      <div class="row">
                         <label class="control-label col-sm-4">Όνομα Εργαζομένου:</label>
                      </div>
@@ -91,39 +106,21 @@
                         </div>
                      </div>
                      <br/>
-                    <div class="row">
-                       <label class="control-label col-sm-4">Επίθετο Εργαζομένου:</label>
-                    </div>
-                    <div class="row">
-                       <div class="col-sm-6">
-                          <input type="text" class="form-control" id="workage" placeholder="Επίθετο" name="workage">
-                       </div>
-                    </div>
-                    <br/>
+                        <div class="row">
+                           <label class="control-label col-sm-4">Επίθετο Εργαζομένου:</label>
+                        </div>
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <input type="text" class="form-control" id="workage" placeholder="Επίθετο" name="workage">
+                           </div>
+                        </div>
+                        <br/>
                     <div class="row">
                         <label class="control-label col-sm-4">Αριθμός Ταυτότητας:</label>
                     </div>
-                    <div class="row">
-                       <div class="col-sm-6">
-                          <input type="text" class="form-control" id="code" placeholder="ΧΧ ΧΧΧΧΧΧ" name="code">
-                       </div>
-                    </div>
-                    <br/>
-                    <div class="row">
-                        <label class="control-label col-sm-4">Ημέρες Εργασίας:</label>
-                    </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="workage" placeholder="Ημέρες" name="workage">
-                        </div>
-                     </div>
-                     <br/>
-                     <div class="row">
-                        <label class="control-label col-sm-4">Αξία Ενσήμου:</label>
-                     </div>
-                     <div class="row">
-                        <div class="col-sm-6">
-                           <input type="text" class="form-control" id="salary" placeholder="Αξία" name="salary">
+                           <input type="text" class="form-control" id="code" placeholder="ΧΧ ΧΧΧΧΧΧ" name="code">
                         </div>
                      </div>
                      <br/>
@@ -137,18 +134,27 @@
                      </div>
                      <br/>
                      <div class="row">
-                        <label class="control-label col-sm-4">Ημερομηνία πάυσης ενσημοδότησης</label>
+                        <label class="control-label col-sm-4">Μηνιαίες Αποδοχές</label>
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input id="input-date" type="date" id="birthday" placeholder="ΜΜ/ηη/ΧΧΧΧ" name="birtdate">
+                            <input type="number" min="0" class="form-control" id="salary" placeholder="Αξία" name="salary">
+                        </div>
+                     </div>
+                     <br/>
+                     <div class="row">
+                        <label class="control-label col-sm-4">Αξία Ενσήμου:</label>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-6">
+                           <input type="number" min="0" class="form-control" id="stamp" placeholder="Αξία" name="stamp">
                         </div>
                      </div>
                      <br/>
                      <br/>
                      <div class="row">
-                        <div class="col-sm-6" >
-                           <button type="submit" class="btn btn-default">Υπολογισμός</button>
+                        <div class="col-sm-6">
+                           <button type="submit" class="btn btn-default">Υποβολή</button>
                         </div>
                         <div class="col-sm-2">
                            <button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>

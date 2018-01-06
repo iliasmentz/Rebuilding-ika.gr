@@ -101,20 +101,20 @@
 	    <section class="c-fi">
 	        <div class="c-fi-wrapper">
 	            <div class="c-fi-grid">
+                            <div class="c-fi-cell">
+                                <a class="c-fi-link ga-event" data-event-action="Feature Image Click" target="_blank" href="/IKA/work_certificate.php" style="background-image:url(/IKA/img/index.jpeg)">
+                                    <div class="c-fi-text">Έκδοση Βεβαιώσης Εργοδότη</div>
+                                </a>
+                            </div>
 
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/retirement/" style="background-image:url(/IKA/img/shakehands.jpg)">
-	                                <div class="c-fi-text">Εργοδοσία</div>
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/stamp.php/" style="background-image:url(/IKA/img/calc.jpg)">
+	                                <div class="c-fi-text">Υπολογισμός Ενσήμων Εργαζόμενου</div>
 	                            </a>
 	                        </div>
+                            <br/>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" target="_blank" href="/IKA/work_certificate.php" style="background-image:url(/IKA/img/index.jpeg)">
-	                                <div class="c-fi-text">Ηλεκτρονική Εκδοση Βεβαιώσεων</div>
-	                            </a>
-	                        </div>
-													<br/>
-	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/stamp.php" style="background-image:url(/IKA/img/calc.jpg)">
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/hire.php" style="background-image:url(/IKA/img/shakehands.jpg)">
 	                                <div class="c-fi-text">Πρόσληψη Εργαζόμενου</div>
 	                            </a>
 	                        </div>
