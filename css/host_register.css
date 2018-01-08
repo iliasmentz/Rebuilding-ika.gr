@@ -46,7 +46,12 @@ hr{
 .form-signin #boss_code,
 .form-signin #ika_code,
 .form-signin #inputRePassword,
+.form-signin #AMKA,
+.form-signin #AFM,
+.form-signin #DOY,
+.form-signin #ID,
 .form-signin #inputEmail,
+.form-signin #street,
 .form-signin #inputPassword {
     direction: ltr;
     height: 44px;

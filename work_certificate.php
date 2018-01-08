@@ -52,11 +52,6 @@
             </p>
             <p >
                 <div style="font-size: small">
-                    ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ :
-                </div>
-            </p>
-            <p >
-                <div style="font-size: small">
                     ΩΡΕΣ ΕΡΓΑΣΙΑΣ :
                 </div>
             </p>

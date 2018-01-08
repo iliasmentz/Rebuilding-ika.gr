@@ -1,4 +1,35 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+    $_SESSION['message']='';
+    require_once 'login_db.php';
+    $conn = new mysqli($hn,$un,$pw,$db);
+    if($conn->connect_error) die($conn->connect_error);
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        $email = $_POST['email'];
+        $query = "SELECT * FROM Login WHERE email='$email'";
+        $result = $conn -> query($query);
+        if(!$result) die ($conn->error);
+        if($result->num_rows==0){
+            $_SESSION['message']='The email is wrong';
+        }else{
+            $result->data_seek(0);
+            $login=$result->fetch_array(MYSQLI_ASSOC);
+            if($login['password']==$_POST['password']){
+                $_SESSION['login'] = 1;
+                $query = "SELECT * FROM User WHERE ID =".$login['ID'];
+                $result = $conn -> query($query);
+                if(!$result) die ($conn->error);
+                $result->data_seek(0);
+                $user=$result->fetch_array(MYSQLI_ASSOC);
+                $_SESSION['username'] = $user['Name'];
+                header("location:index.php");
+            }else{
+                $_SESSION['message']='The password is wrong';
+            }
+        }
+    }
+ ?>
 <html lang="en">
 
 <head>
@@ -38,10 +69,11 @@
             <hr/>
             <form class="form-signin" method="post">
                 <span id="reauth-email" class="reauth-email"></span>
+                <h2><?=$_SESSION['message']?></h2>
                 <p class="input_title">Email</p>
-                <input type="text" id="inputEmail" class="login_box" placeholder="user01@ParentOnDuty.com" name="username" th:required="required" required="true" autofocus="true" />
+                <input type="text" id="inputEmail" class="login_box" placeholder="user01@ParentOnDuty.com" name="email"  required="true" autofocus="true" />
                 <p class="input_title">Κωδικός</p>
-                <input type="password" id="inputPassword" class="login_box" placeholder="******" name="password" th:required="required" required="true"/>
+                <input type="password" id="inputPassword" class="login_box" placeholder="******" name="password"  required="true"/>
                 <button class="btn btn-lg btn-primary" type="submit">Σύνδεση</button>
                 <a href="/IKA/user_register.php">Δεν έχετε λογαριασμό;</a>
                 <hr/>

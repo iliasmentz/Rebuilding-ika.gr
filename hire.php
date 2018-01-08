@@ -102,7 +102,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="workage" placeholder="Όνομα" name="workage">
+                           <input type="text" class="form-control" id="workage" placeholder="Όνομα" name="workage"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -111,7 +111,7 @@
                         </div>
                         <div class="row">
                            <div class="col-sm-6">
-                              <input type="text" class="form-control" id="workage" placeholder="Επίθετο" name="workage">
+                              <input type="text" class="form-control" id="workage" placeholder="Επίθετο" name="workage"  required="true" autofocus="true">
                            </div>
                         </div>
                         <br/>
@@ -120,7 +120,7 @@
                     </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="code" placeholder="ΧΧ ΧΧΧΧΧΧ" name="code">
+                           <input type="text" class="form-control" id="code" placeholder="ΧΧ ΧΧΧΧΧΧ" name="code"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -129,7 +129,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input id="input-date" type="date" id="birthday" placeholder="ΜΜ/ηη/ΧΧΧΧ" name="birtdate">
+                           <input id="input-date" type="date" id="birthday" placeholder="ΜΜ/ηη/ΧΧΧΧ" name="birtdate"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -138,7 +138,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
-                            <input type="number" min="0" class="form-control" id="salary" placeholder="Αξία" name="salary">
+                            <input type="number" min="0" class="form-control" id="salary" placeholder="Αξία" name="salary"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -147,7 +147,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input type="number" min="0" class="form-control" id="stamp" placeholder="Αξία" name="stamp">
+                           <input type="number" min="0" class="form-control" id="stamp" placeholder="Αξία" name="stamp"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>

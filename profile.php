@@ -75,7 +75,10 @@
 	</nav>
 	<div class="container ">
 		<div class="row">
-			<h1>Ο λογαριασμός μου</h1>
+		<? session_start();?>
+		<h2><?=$_SESSION['welcome']?></h2>
+		<? $_SESSION['welcome']="";?> 
+		<h1>Ο λογαριασμός μου</h1>
 		</div>
 		<div class="row">
 		      <div class="col-md-8">

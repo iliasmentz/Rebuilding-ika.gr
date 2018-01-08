@@ -122,7 +122,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="document" placeholder="ΑΙ1212" name="document">
+                           <input type="text" class="form-control" id="document" placeholder="ΑΙ1212" name="document"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -132,10 +132,10 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="region" placeholder="Αττική" name="region">
+                           <input type="text" class="form-control" id="region" placeholder="Αττική" name="region"  required="true" autofocus="true">
                         </div>
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="city" placeholder="Αθήνα" name="city">
+                           <input type="text" class="form-control" id="city" placeholder="Αθήνα" name="city"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -145,10 +145,10 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="street" placeholder="Ευδόξου" name="document">
+                           <input type="text" class="form-control" id="street" placeholder="Ευδόξου" name="document"  required="true" autofocus="true">
                         </div>
                         <div class="col-sm-3">
-                           <input type="number" min="1"  class="form-control" id="streetnumber" placeholder="13" name="streetnumber">
+                           <input type="number" min="1"  class="form-control" id="streetnumber" placeholder="13" name="streetnumber"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -161,7 +161,7 @@
                      </div>
                      <div class="row">
                          <div class="col-sm-6">
-                             <input id="input-date" type="date" value="1996-04-09">
+                             <input id="input-date" type="date" value="1996-04-09"  required="true" autofocus="true">
                          </div>
                      </div>
                      <br/>
@@ -170,7 +170,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="afm" placeholder="ΑΦΜ" name="afm">
+                           <input type="text" class="form-control" id="afm" placeholder="ΑΦΜ" name="afm"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -179,7 +179,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="amka" placeholder="ΑΜΚΑ" name="amka">
+                           <input type="text" class="form-control" id="amka" placeholder="ΑΜΚΑ" name="amka"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -188,7 +188,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="surname" placeholder="Πλακιάς" name="surname">
+                           <input type="text" class="form-control" id="surname" placeholder="Πλακιάς" name="surname"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -197,7 +197,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="onoma" placeholder="Απόστολος" name="onoma">
+                           <input type="text" class="form-control" id="onoma" placeholder="Απόστολος" name="onoma"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>

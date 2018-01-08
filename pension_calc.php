@@ -119,7 +119,7 @@
 					  </div>
 					  <div class="row">
 						  <div class="col-sm-6">
-							  <input id="input-date" type="date" value="1996-04-09">
+							  <input id="input-date" type="date" value="1996-04-09"  required="true" autofocus="true">
 						  </div>
 					  </div>
 					  <br/>
@@ -128,7 +128,7 @@
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="number" class="form-control" id="workage" placeholder="Έτη εργασίας" name="workage">
+                                <input type="number" class="form-control" id="workage" placeholder="Έτη εργασίας" name="workage"  required="true" autofocus="true">
                             </div>
 						</div>
                         <br/>
@@ -137,7 +137,7 @@
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="number" class="form-control" id="salary" placeholder="Αποδοχές" name="salary">
+                                <input type="number" class="form-control" id="salary" placeholder="Αποδοχές" name="salary"  required="true" autofocus="true">
                             </div>
                         </div>
                         <br/>
@@ -147,7 +147,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="number" min="55" max="70" class="form-control" id="age" placeholder="Ηλικία Συνταξιοδότησης" name="pension_age">
+                                <input type="number" min="55" max="70" class="form-control" id="age" placeholder="Ηλικία Συνταξιοδότησης" name="pension_age"  required="true" autofocus="true">
                             </div>
                         </div>
 						<br/>
