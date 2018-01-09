@@ -52,9 +52,25 @@
 				<li>
 					<a href="#">Γλώσσα</a>
 				</li>
-				<li>
-					<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>
-				</li>
+                <li>
+                    <?php session_start(); ?>
+                    <?
+                    if (array_key_exists('login', $_SESSION)) {
+                        if($_SESSION['login']==1){
+                            echo '<a href="/IKA/profile.php">'.$_SESSION['username'].'</a>
+                            </li>
+                            <li>
+                                <a href="/IKA/logout.php">Αποσύνδεση</a>
+                            </li>
+                            ';
+                        }else{
+                            echo '<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>';
+                        }
+                    }else{
+                        echo '<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>';
+                    }
+                     ?>
+                </li>
 			</ul>
 		</div>
 	</nav>
