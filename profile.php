@@ -146,12 +146,12 @@
 		      <div class="col-md-6">
 		          <h3>Τα Στοιχεία Μου</h3>
 		          <div class="well" id="wellinfo">
-		          	<p style="font-size: large;" >Όνομα: <?=$user['Name']?> </p>
-					<p style="font-size: large;" >Επώνυμο: <?=$user['Surname']?></p>
-					<p style="font-size: large;" >E-mail: <?=$login['email']?></p>
-					<p style="font-size: large;" >Α.Φ.Μ.: <?=$user['AFM']?></p>
-					<p style="font-size: large;" >Α.Μ.Κ.Α.: <?=$user['AMKA']?></p>
-					<p style="font-size: large;" >Οδός Κατοικίας: <?=$user['street']?></p>
+		          	<p style="font-size: large;" ><strong>Όνομα:</strong> <?=$user['Name']?> </p>
+					<p style="font-size: large;" ><strong>Επώνυμο:</strong> <?=$user['Surname']?></p>
+					<p style="font-size: large;" ><strong>E-mail:</strong> <?=$login['email']?></p>
+					<p style="font-size: large;" ><strong>Α.Φ.Μ.:</strong> <?=$user['AFM']?></p>
+					<p style="font-size: large;" ><strong>Α.Μ.Κ.Α.:</strong> <?=$user['AMKA']?></p>
+					<p style="font-size: large;" ><strong>Οδός Κατοικίας:</strong> <?=$user['street']?></p>
 					<button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή Στοιχείων</button>
 		          </div>
 				  <div class="well" style="display:none;" id="welledit">
