@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php session_start();
+	if(!array_key_exists('login', $_SESSION)){
+		$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
+		header("location:login.php");
+	}
+	if($_SESSION['login']!=1){
+			$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
+			header("location:login.php");
+	}
+    require_once 'login_db.php';
+    $conn = new mysqli($hn,$un,$pw,$db);
+    if($conn->connect_error) die($conn->connect_error);
+    $query = "SELECT * FROM Login WHERE ID =".$_SESSION['id'];
+	$result = $conn -> query($query);
+	if(!$result) die ($conn->error);
+	$result->data_seek(0);
+	$login=$result->fetch_array(MYSQLI_ASSOC);
+    if($login['type']!=1 and $login['type']!=3){
+        die("You are not a boss");
+    }
+?>
   <head>
     <title>Certificate</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>

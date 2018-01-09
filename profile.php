@@ -1,5 +1,63 @@
 <!DOCTYPE html>
 <html>
+<?php session_start();
+	if(!array_key_exists('login', $_SESSION)){
+		$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
+		header("location:login.php");
+	}
+	if($_SESSION['login']!=1){
+			$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
+			header("location:login.php");
+	}
+	require_once 'login_db.php';
+    $conn = new mysqli($hn,$un,$pw,$db);
+    if($conn->connect_error) die($conn->connect_error);
+	// echo $_SESSION['id'];
+	$query = "SELECT * FROM Login WHERE ID =".$_SESSION['id'];
+	$result = $conn -> query($query);
+	if(!$result) die ($conn->error);
+	$result->data_seek(0);
+	$login=$result->fetch_array(MYSQLI_ASSOC);
+	$query = "SELECT * FROM User WHERE ID =".$login['ID'];
+	$result = $conn -> query($query);
+	if(!$result) die ($conn->error);
+	$result->data_seek(0);
+	$user=$result->fetch_array(MYSQLI_ASSOC);
+	if($_SERVER['REQUEST_METHOD']=='POST'){
+		$username = $_POST['name'];
+		$surname = $_POST['surname'];
+		$amka = $_POST['AMKA'];
+		$afm = $_POST['AFM'];
+		// $doy = $_POST['DOY'];
+		$street = $_POST['street'];
+		if($username!=''){
+			$query = "UPDATE User SET Name ='$username' WHERE User.ID =".$_SESSION['id'];
+			$result = $conn -> query($query);
+			if(!$result) die ($conn->error);
+		}
+		if($surname!=''){
+			$query = "UPDATE User SET Surname ='$surname' WHERE User.ID =".$_SESSION['id'];
+			$result = $conn -> query($query);
+			if(!$result) die ($conn->error);
+		}
+		if($amka!=''){
+			$query = "UPDATE User SET AMKA ='$amka' WHERE User.ID =".$_SESSION['id'];
+			$result = $conn -> query($query);
+			if(!$result) die ($conn->error);
+		}
+		if($afm!=''){
+			$query = "UPDATE User SET AFM ='$afm' WHERE User.ID =".$_SESSION['id'];
+			$result = $conn -> query($query);
+			if(!$result) die ($conn->error);
+		}
+		if($street!=''){
+			$query = "UPDATE User SET street ='$street' WHERE User.ID =".$_SESSION['id'];
+			$result = $conn -> query($query);
+			if(!$result) die ($conn->error);
+		}
+		header("location: profile.php");
+	}
+ ?>
 <head>
 	<title>Profile</title>
 	<meta charset="UTF-8">
@@ -22,7 +80,7 @@
 				<a class="navbar-brand" href="./">ΙΚΑ</a>
 			</div>
 			<ul class="nav navbar-nav homenav">
-				<li class="active">
+				<li >
 					<a href="#">Ασφάλεια</a>
 				</li>
                 <li class="active">
@@ -75,23 +133,28 @@
 	</nav>
 	<div class="container ">
 		<div class="row">
-		<? session_start();?>
-		<h2><?=$_SESSION['welcome']?></h2>
-		<? $_SESSION['welcome']="";?> 
+		<?php
+			if(array_key_exists('welcome', $_SESSION)){
+				echo '<h2>'.$_SESSION['welcome'].'</h2>';
+				$_SESSION['welcome']="";
+			}
+		?>
 		<h1>Ο λογαριασμός μου</h1>
 		</div>
 		<div class="row">
-		      <div class="col-md-8">
+		      <div class="col-md-6">
 		          <h3>Τα Στοιχεία Μου</h3>
 		          <div class="well" id="wellinfo">
-		          	<p style="font-size: large;" th:inline="text">Όνομα: Απόστολος </p>
-					<p style="font-size: large;" th:inline="text">Επώνυμο: Πλακιάς</p>
-					<p style="font-size: large;" th:inline="text">ΑΦΜ: 113211313</p>
-					<p style="font-size: large;" th:inline="text">E-mail: apostp@</p>
+		          	<p style="font-size: large;" >Όνομα: <?=$user['Name']?> </p>
+					<p style="font-size: large;" >Επώνυμο: <?=$user['Surname']?></p>
+					<p style="font-size: large;" >E-mail: <?=$login['email']?></p>
+					<p style="font-size: large;" >Α.Φ.Μ.: <?=$user['AFM']?></p>
+					<p style="font-size: large;" >Α.Μ.Κ.Α.: <?=$user['AMKA']?></p>
+					<p style="font-size: large;" >Οδός Κατοικίας: <?=$user['street']?></p>
 					<button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή Στοιχείων</button>
 		          </div>
 				  <div class="well" style="display:none;" id="welledit">
-				  	<form class="" action="" method="get">
+				  	<form class="" action="profile.php" method="post">
 						<div class="row">
 							<label class="control-label col-sm-2">Όνομα:</label>
 							<div class="col-sm-6">
@@ -114,6 +177,27 @@
 						</div>
 						<br/>
 						<div class="row">
+							<label class="control-label col-sm-2">Α.Φ.Μ.:</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="AFM" placeholder="Αλλαγή Α.Φ.Μ." name="AFM">
+							</div>
+						</div>
+						<br/>
+						<div class="row">
+							<label class="control-label col-sm-2">Α.Μ.Κ.Α.:</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="AMKA" placeholder="Αλλαγή Α.Μ.Κ.Α." name="AMKA">
+							</div>
+						</div>
+						<br/>
+						<div class="row">
+							<label class="control-label col-sm-2">Οδός Κατοικίας:</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" id="street" placeholder="Αλλαγή οδού" name="street">
+							</div>
+						</div>
+						<br/>
+						<div class="row">
 							<div class="col-sm-6">
 								<button type="submit" class="btn btn-default">Υποβολή</button>
 							</div>
@@ -124,30 +208,46 @@
 					</form>
 				  </div>
 		    </div>
-		</div>
-		<div class="row">
-		      <div class="col-md-8">
-		          <h3>Ασφάλιση</h3>
-		          <div class="well">
-					  <p style="font-size: large;" th:inline="text">Κωδικός Ασφάλισης: 111</p>
-		          </div>
-		    </div>
-		</div>
-		<div class="row">
-			<div class="col-md-8">
-				<h3>Εργοδότης</h3>
+			<div class="col-md-6">
+				<h3>Ασφάλιση</h3>
 				<div class="well">
-					<p style="font-size: large;" th:inline="text">Όνομα Εταιρείας: Γερμανός</p>
+					<p style="font-size: large;" >Αριθμός Μητρώου Ασφάλισης: <?=$user['ID']?> </p>
+					<p style="font-size: large;" >ΔΟΥ: <?=$user['DOY']?> </p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-		      <div class="col-md-8">
-		          <h3>Σύνταξη</h3>
-		          <div class="well">
-					  <p style="font-size: large;" th:inline="text">Ποσό Σύνταξη: 111$</p>
-		          </div>
-		    </div>
+			<?php
+				if($login['type']==1 || $login['type']==3){
+					$query = "SELECT * FROM Company WHERE ID =".$login['ID'];
+					$result = $conn -> query($query);
+					if(!$result) die ($conn->error);
+					$result->data_seek(0);
+					$boss=$result->fetch_array(MYSQLI_ASSOC);
+					echo "<div class=\"col-md-6\">
+							<h3>Εργοδότης</h3>
+							<div class=\"well\">
+								<p style=\"font-size: large;\" >Είδος Σύνταξης: ".$boss['name']."</p>
+							</div>
+						  </div>";
+				}
+			 ?>
+			<?php
+				if($login['type']==2 || $login['type']==3){
+					$query = "SELECT * FROM Pension WHERE ID =".$login['ID'];
+					$result = $conn -> query($query);
+					if(!$result) die ($conn->error);
+					$result->data_seek(0);
+					$pension=$result->fetch_array(MYSQLI_ASSOC);
+					echo "<div class=\"col-md-6\">
+							<h3>Σύνταξη</h3>
+							<div class=\"well\">
+								<p style=\"font-size: large;\" >Είδος Σύνταξης: ".$pension['type']."</p>
+								<p style=\"font-size: large;\" >Ποσό Σύνταξης: ".$pension['amount']."</p>
+							</div>
+						  </div>";
+				}
+			 ?>
 		</div>
 	</div>
 </body>

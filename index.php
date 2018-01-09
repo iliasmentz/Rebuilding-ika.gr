@@ -34,10 +34,10 @@
             <?
             if (array_key_exists('login', $_SESSION)) {
                 if($_SESSION['login']==1){
-                    echo '<a href="/IKA/logout.php">Αποσύνδεση</a>
+                    echo '<a href="/IKA/profile.php">'.$_SESSION['username'].'</a>
                     </li>
                     <li>
-                        <a href="/IKA/profile.php">'.$_SESSION['username'].'</a>
+                        <a href="/IKA/logout.php">Αποσύνδεση</a>
                     </li>
                     ';
                 }else{

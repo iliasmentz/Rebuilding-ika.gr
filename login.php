@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <?php
     session_start();
+    // check if he has logged in
+    if(array_key_exists('login', $_SESSION)){
+        if($_SESSION['login']==1){
+            header("location:index.php");
+        }
+	}
     $_SESSION['message']='';
     require_once 'login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
@@ -11,7 +17,7 @@
         $result = $conn -> query($query);
         if(!$result) die ($conn->error);
         if($result->num_rows==0){
-            $_SESSION['message']='The email is wrong';
+            $_SESSION['message']='Το mail είναι λάθος';
         }else{
             $result->data_seek(0);
             $login=$result->fetch_array(MYSQLI_ASSOC);
@@ -23,9 +29,10 @@
                 $result->data_seek(0);
                 $user=$result->fetch_array(MYSQLI_ASSOC);
                 $_SESSION['username'] = $user['Name'];
+                $_SESSION['id'] = $user['ID'];
                 header("location:index.php");
             }else{
-                $_SESSION['message']='The password is wrong';
+                $_SESSION['message']='Ο κωδικός είναι λάθος';
             }
         }
     }
@@ -69,9 +76,15 @@
             <hr/>
             <form class="form-signin" method="post">
                 <span id="reauth-email" class="reauth-email"></span>
+                <?
+                    if(array_key_exists('mustlogin', $_SESSION)){
+                        echo '<h2>'.$_SESSION['mustlogin'].'</h2>';
+                        $_SESSION['mustlogin']='';
+                    }
+                ?>
                 <h2><?=$_SESSION['message']?></h2>
                 <p class="input_title">Email</p>
-                <input type="text" id="inputEmail" class="login_box" placeholder="user01@ParentOnDuty.com" name="email"  required="true" autofocus="true" />
+                <input type="email" id="inputEmail" class="login_box" placeholder="user01@ParentOnDuty.com" name="email"  required="true" autofocus="true" />
                 <p class="input_title">Κωδικός</p>
                 <input type="password" id="inputPassword" class="login_box" placeholder="******" name="password"  required="true"/>
                 <button class="btn btn-lg btn-primary" type="submit">Σύνδεση</button>
