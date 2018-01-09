@@ -99,25 +99,25 @@
             <form class="form-signin" method="post" action="user_register.php" onsubmit="return checkInp()" name="myForm">
                 <h2><font color="red"><?=$_SESSION['message']?></font></h2>
                 <span id="reauth-email" class="reauth-email"></span>
-                <p class="input_title">Email</p>
+                <p class="input_title">Email(*)</p>
                 <input type="email" id="inputEmail" oninput="remobeBorder(this)" class="login_box" placeholder="user01@email.com" name="Email" required="True" autofocus="True"/>
-                <p class="input_title">Όνομα</p>
+                <p class="input_title">Όνομα(*)</p>
                 <input type="text" id="inputUserName" oninput="remobeBorder(this)" class="login_box" placeholder="Απόστολος" name="Username" required="True" autofocus="True"/>
-                <p class="input_title">Επώνυμο</p>
+                <p class="input_title">Επώνυμο(*)</p>
                 <input type="text" id="inputSurname"  oninput="remobeBorder(this)" class="login_box" placeholder="Πλακιάς" name="Surname" required="True" autofocus="True"/>
-                <p class="input_title">Α.Μ.Κ.Α.</p>
+                <p class="input_title">Α.Μ.Κ.Α.(*)</p>
                 <input type="text" id="AMKA" oninput="remobeBorder(this)" class="login_box" placeholder="1121332342" name="AMKA" required="True" autofocus="True"/>
                 <p class="input_title">Α.Φ.Μ.</p>
-                <input type="text" id="AFM"  oninput="remobeBorder(this)" class="login_box" placeholder="1211345345" name="AFM" required="True" autofocus="True"/>
+                <input type="text" id="AFM"  oninput="remobeBorder(this)" class="login_box" placeholder="1211345345" name="AFM" value="" autofocus="True"/>
                 <p class="input_title">ΔΟΥ</p>
-                <input type="text" id="DOY" oninput="remobeBorder(this)" class="login_box" placeholder="Γλυφάδας" name="DOY" required="True" autofocus="True"/>
-                <p class="input_title">Αριθμός Μητρώου Ασφάλισης</p>
+                <input type="text" id="DOY" oninput="remobeBorder(this)" class="login_box" placeholder="Γλυφάδας" name="DOY" value="" autofocus="True"/>
+                <p class="input_title">Αριθμός Μητρώου Ασφάλισης(*)</p>
                 <input type="text" id="ID" class="login_box" oninput="remobeBorder(this)" placeholder="1312313132" name="ID" required="True" autofocus="True"/>
                 <p class="input_title">Οδός Κατοικίας</p>
-                <input type="text" id="street" class="login_box" placeholder="ευδόξου 13" oninput="remobeBorder(this)" name="street"/>
-                <p class="input_title">Κωδικός</p>
+                <input type="text" id="street" class="login_box" placeholder="ευδόξου 13" oninput="remobeBorder(this)"  value="" name="street"/>
+                <p class="input_title">Κωδικός(*)</p>
                 <input type="password" id="inputPassword" oninput="remobeBorder(this)" class="login_box" placeholder="******" name="Pwd" required="True"/>
-                <p class="input_title">Επαλήθευση Κωδικού</p>
+                <p class="input_title">Επαλήθευση Κωδικού(*)</p>
                 <input type="password" id="inputRePassword" oninput="remobeBorder(this)" class="login_box" placeholder="******" name="RePwd" required="True"/>
                 <div class="checkbox" id="safe">
                     <label ><input type="checkbox"  onclick="checkAddress(this)" name="pension" id="pension" value="2">Συνταξιούχος</label>

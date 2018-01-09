@@ -24,16 +24,17 @@
 	if(!$result) die ($conn->error);
 	$result->data_seek(0);
 	$user=$result->fetch_array(MYSQLI_ASSOC);
-	if($_SERVER['REQUEST_METHOD']=='POST'){
+	if(isset($_POST['user_info'])){
 		$username = $_POST['name'];
 		$surname = $_POST['surname'];
 		$amka = $_POST['AMKA'];
 		$afm = $_POST['AFM'];
-		// $doy = $_POST['DOY'];
+        // $doy = $_POST['DOY'];
 		$street = $_POST['street'];
 		if($username!=''){
 			$query = "UPDATE User SET Name ='$username' WHERE User.ID =".$_SESSION['id'];
 			$result = $conn -> query($query);
+            $_SESSION['username'] = $username;
 			if(!$result) die ($conn->error);
 		}
 		if($surname!=''){
@@ -56,8 +57,20 @@
 			$result = $conn -> query($query);
 			if(!$result) die ($conn->error);
 		}
+
 		header("location: profile.php");
 	}
+    else if (isset($_POST['doy_update'])) {
+        # code...
+        $doy = $_POST['DOY'];
+        if($doy!=''){
+            $query = "UPDATE User SET DOY ='$doy' WHERE User.ID =".$_SESSION['id'];
+			$result = $conn -> query($query);
+
+			if(!$result) die ($conn->error);
+        }
+        header("location: profile.php");
+    }
  ?>
 <head>
 	<title>Profile</title>
@@ -215,7 +228,7 @@
 						<br/>
 						<div class="row">
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-default">Υποβολή</button>
+								<button type="submit" class="btn btn-default" name="user_info">Υποβολή</button>
 							</div>
 							<div class="col-sm-2">
 								<button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>
@@ -226,10 +239,36 @@
 		    </div>
 			<div class="col-md-6">
 				<h3>Ασφάλιση</h3>
-				<div class="well">
+				<div class="well" id="wellinfo2">
 					<p style="font-size: large;" >Αριθμός Μητρώου Ασφάλισης: <?=$user['ID']?> </p>
 					<p style="font-size: large;" >ΔΟΥ: <?=$user['DOY']?> </p>
-				</div>
+                    <button type="button"  class="btn btn-link btn-xs" id="nochange2" onclick="show_auto2()">Αλλαγή Στοιχείων</button>
+                </div>
+                <div class="well" style="display:none;" id="welledit2">
+                    <form class="" action="profile.php" method="post">
+                        <div class="row">
+                            <label class="control-label col-sm-2">Αριθμός Μητρώου Ασφάλισης:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="name" value="<?=$user['ID']?>" readonly>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <label class="control-label col-sm-2">ΔΟΥ:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="street"  name="doy" value="<?=$user['DOY']?>">
+                            </div>
+                        </div>
+                        </br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-default" name="doy_update">Υποβολή</button>
+                            </div>
+                            <div class="col-sm-2">
+                                <button  onclick="hide_auto2()" type="button" class="btn btn-default">Ακύρωση</button>
+                            </div>
+                        </div>
+                    </form>
 			</div>
 		</div>
 		<div class="row">
@@ -279,6 +318,18 @@ function show_auto(){
 		document.getElementById("welledit").style.display="block";
 		document.getElementById("nochange").style.display="none";
 		document.getElementById("wellinfo").style.display="none";
+}
+
+function hide_auto2(){
+		document.getElementById("welledit2").style.display="none";
+		document.getElementById("nochange2").style.display="block";
+		document.getElementById("wellinfo2").style.display="block";
+}
+
+function show_auto2(){
+		document.getElementById("welledit2").style.display="block";
+		document.getElementById("nochange2").style.display="none";
+		document.getElementById("wellinfo2").style.display="none";
 }
 </script>
 </html>
