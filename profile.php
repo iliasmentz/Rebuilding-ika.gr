@@ -29,29 +29,36 @@
 		$surname = $_POST['surname'];
 		$amka = $_POST['AMKA'];
 		$afm = $_POST['AFM'];
+		$email = $_POST['email'];
 		// $doy = $_POST['DOY'];
 		$street = $_POST['street'];
-		if($username!=''){
+		if($username!='' and $user['Name']!=$username){
 			$query = "UPDATE User SET Name ='$username' WHERE User.ID =".$_SESSION['id'];
 			$result = $conn -> query($query);
 			if(!$result) die ($conn->error);
+			$_SESSION['username']= $username;
 		}
-		if($surname!=''){
+		if($surname!='' and $user['Surname']!=$surname){
 			$query = "UPDATE User SET Surname ='$surname' WHERE User.ID =".$_SESSION['id'];
 			$result = $conn -> query($query);
 			if(!$result) die ($conn->error);
 		}
-		if($amka!=''){
+		if($amka!='' and $user['AMKA']!=$amka){
 			$query = "UPDATE User SET AMKA ='$amka' WHERE User.ID =".$_SESSION['id'];
 			$result = $conn -> query($query);
 			if(!$result) die ($conn->error);
 		}
-		if($afm!=''){
+		if($email!='' and $login['email']!=$email){
+			$query = "UPDATE Login SET email ='$email' WHERE Login.ID =".$_SESSION['id'];
+			$result = $conn -> query($query);
+			if(!$result) die ($conn->error);
+		}
+		if($afm!='' and $user['AFM']!=$afm){
 			$query = "UPDATE User SET AFM ='$afm' WHERE User.ID =".$_SESSION['id'];
 			$result = $conn -> query($query);
 			if(!$result) die ($conn->error);
 		}
-		if($street!=''){
+		if($street!='' and $user['street']!=$street){
 			$query = "UPDATE User SET street ='$street' WHERE User.ID =".$_SESSION['id'];
 			$result = $conn -> query($query);
 			if(!$result) die ($conn->error);
