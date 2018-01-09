@@ -12,6 +12,7 @@
 	require_once 'login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
     if($conn->connect_error) die($conn->connect_error);
+	mysqli_set_charset($conn,'utf8');
 	// echo $_SESSION['id'];
 	$query = "SELECT * FROM Login WHERE ID =".$_SESSION['id'];
 	$result = $conn -> query($query);

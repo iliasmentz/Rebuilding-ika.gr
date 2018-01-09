@@ -4,7 +4,9 @@
     $_SESSION['message']='';
     require_once 'login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
+    mysqli_set_charset($conn,'utf8');
     if($conn->connect_error) die($conn->connect_error);
+    mysqli_set_charset($conn,'utf8');
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $email = $_POST['Email'];
         $query = "SELECT * FROM Login WHERE email='$email'";

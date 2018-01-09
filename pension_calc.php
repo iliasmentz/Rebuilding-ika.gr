@@ -128,7 +128,7 @@
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="number" class="form-control" id="workage" placeholder="Έτη εργασίας" name="workage"  required="true" autofocus="true">
+                                <input type="number" min="0" class="form-control" id="workage" placeholder="Έτη εργασίας" name="workage"  required="true" autofocus="true">
                             </div>
 						</div>
                         <br/>
@@ -137,7 +137,7 @@
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="number" class="form-control" id="salary" placeholder="Αποδοχές" name="salary"  required="true" autofocus="true">
+                                <input type="number" min="0" class="form-control" id="salary" placeholder="Αποδοχές" name="salary"  required="true" autofocus="true">
                             </div>
                         </div>
                         <br/>
