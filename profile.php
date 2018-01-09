@@ -24,14 +24,19 @@
 	if(!$result) die ($conn->error);
 	$result->data_seek(0);
 	$user=$result->fetch_array(MYSQLI_ASSOC);
-	if(isset($_POST['user_info'])){
+	if($_SERVER['REQUEST_METHOD']=='POST'){
 		$username = $_POST['name'];
 		$surname = $_POST['surname'];
 		$amka = $_POST['AMKA'];
 		$afm = $_POST['AFM'];
 		$email = $_POST['email'];
-		// $doy = $_POST['DOY'];
+		$doy = $_POST['doy'];
 		$street = $_POST['street'];
+        if($doy!='' and $user['DOY']!=$doy){
+            $query = "UPDATE User SET DOY ='$doy' WHERE User.ID =".$_SESSION['id'];
+			$result = $conn -> query($query);
+			if(!$result) die ($conn->error);
+        }
 		if($username!='' and $user['Name']!=$username){
 			$query = "UPDATE User SET Name ='$username' WHERE User.ID =".$_SESSION['id'];
 			$result = $conn -> query($query);
@@ -67,17 +72,6 @@
 
 		header("location: profile.php");
 	}
-    else if (isset($_POST['doy_update'])) {
-        # code...
-        $doy = $_POST['DOY'];
-        if($doy!=''){
-            $query = "UPDATE User SET DOY ='$doy' WHERE User.ID =".$_SESSION['id'];
-			$result = $conn -> query($query);
-
-			if(!$result) die ($conn->error);
-        }
-        header("location: profile.php");
-    }
  ?>
 <head>
 	<title>Profile</title>
@@ -241,7 +235,7 @@
 								<button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>
 							</div>
 						</div>
-					</form>
+
 				  </div>
 		    </div>
 			<div class="col-md-6">
@@ -252,7 +246,6 @@
                     <button type="button"  class="btn btn-link btn-xs" id="nochange2" onclick="show_auto2()">Αλλαγή Στοιχείων</button>
                 </div>
                 <div class="well" style="display:none;" id="welledit2">
-                    <form class="" action="profile.php" method="post">
                         <div class="row">
                             <label class="control-label col-sm-2">Αριθμός Μητρώου Ασφάλισης:</label>
                             <div class="col-sm-6">
@@ -263,13 +256,13 @@
                         <div class="row">
                             <label class="control-label col-sm-2">ΔΟΥ:</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="street"  name="doy" value="<?=$user['DOY']?>">
+                                <input type="text" class="form-control" id="doy"  name="doy" value="<?=$user['DOY']?>">
                             </div>
                         </div>
                         </br>
                         <div class="row">
                             <div class="col-sm-6">
-                                <button type="submit" class="btn btn-default" name="doy_update">Υποβολή</button>
+                                <button type="submit" class="btn btn-default" name="user_info">Υποβολή</button>
                             </div>
                             <div class="col-sm-2">
                                 <button  onclick="hide_auto2()" type="button" class="btn btn-default">Ακύρωση</button>
@@ -277,6 +270,7 @@
                         </div>
                     </form>
 			</div>
+		</div>
 		</div>
 		<div class="row">
 			<?php
