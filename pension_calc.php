@@ -80,36 +80,43 @@
         <div class="row">
         <h3>Στοιχεία Μελλοντικού Συνταξιούχου</h3>
         </br>
-        <form class="" action="" method="get">
+        <form class="" action="" method="get" onsubmit="return false" >
 
 		<div class="row">
             <div class="col-md-6">
-				<div class="well" id="wellratio">
-					<div class="row">
-						<label for="sel1" class="control-label col-sm-12">Συνταξιοδοτικός Φορέας</label>
-					</div>
-					<div class="row col-sm-6" >
-						<select class="form-control" id="sel1" name="sel1">
-							<option>ΙΚΑ-ΕΤΑΜ</option>
-							<option>ΙΚΑ</option>
-							<option>ΕΤΑΜ</option>
-						</select>
-					</div>
+				<div class="row">
+					<div class="well" id="wellratio">
+						<div class="row">
+							<label for="sel1" class="control-label col-sm-12">Συνταξιοδοτικός Φορέας</label>
+						</div>
+						<div class="row col-sm-6" >
+							<select class="form-control" id="sel1" name="sel1">
+								<option>ΙΚΑ-ΕΤΑΜ</option>
+								<option>ΙΚΑ</option>
+								<option>ΕΤΑΜ</option>
+							</select>
+						</div>
+						</br>
+						</br>
+						<div class="row">
+							<label for="sel2" class="control-label col-sm-12">Τύπος Σύνταξης</label>
+						</div>
+						<div class="row col-sm-6" >
+							<select class="form-control" id="sel2" name="sel2">
+								<option value="1">Γεράματος</option>
+								<option value="1.5">Αναπυρίας</option>
+								<option value="1.2">Θάνατος Ασφαλισμένου</option>
+								<option value="1.1">Θάνατος Συνταξιούχου</option>
+							</select>
+						</div>
 					</br>
 					</br>
-					<div class="row">
-						<label for="sel2" class="control-label col-sm-12">Τύπος Σύνταξης</label>
 					</div>
-					<div class="row col-sm-6" >
-						<select class="form-control" id="sel2" name="sel2">
-							<option>Γεράματος</option>
-							<option>Αναπυρίας</option>
-							<option>Θάνατος Ασφαλισμένου</option>
-							<option>Θάνατος Συνταξιούχου</option>
-						</select>
+				</div>
+				<div class="row">
+					<div class="well" id="result" style="display:none;">
+							<h3 id="myHeader">Ποσό Μελλοντικής Σύνταξης: </h3>
 					</div>
-				</br>
-				</br>
 				</div>
 			</div>
 		      <div class="col-md-6">
@@ -153,11 +160,11 @@
 						<br/>
 						<div class="row">
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-default">Υπολογισμός</button>
+								<button onclick="pension_calculate()" type="submit" class="btn btn-default">Υπολογισμός</button>
 							</div>
-							<div class="col-sm-2">
+							<!-- <div class="col-sm-2">
 								<button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>
-							</div>
+							</div> -->
 						</div>
 				  </div>
 		    </div>
@@ -168,6 +175,16 @@
 </body>
 
 <script>
+function pension_calculate(){
+	var option2 = document.getElementById('sel2').value;
+	var ages = document.getElementById('workage').value*0.1;
+	var salary = document.getElementById('salary').value*0.05;
+	var age = document.getElementById('age').value*0.1;
+	var result =option2*ages*salary*age;
+	result = result.toFixed(2);
+	myHeader.innerText ="Μελλοντικό Ποσό Σύνταξης: "+ result+"€";
+	document.getElementById("result").style.display="block";
+}
 function hide_auto(){
 		document.getElementById("welledit").style.display="none";
 		document.getElementById("nochange").style.display="block";

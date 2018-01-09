@@ -159,42 +159,42 @@
 						<div class="row">
 							<label class="control-label col-sm-2">Όνομα:</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" id="name" placeholder="Αλλαγή Ονόματος" name="name">
+								<input type="text" class="form-control" id="name" placeholder="Αλλαγή Ονόματος" name="name" value="<?=$user['Name']?> ">
 							</div>
 						</div>
 						<br/>
 						<div class="row">
 							<label class="control-label col-sm-2">Επίθετο:</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" id="surname" placeholder="Αλλαγή Επίθετου" name="surname">
+								<input type="text" class="form-control" id="surname" placeholder="Αλλαγή Επίθετου" name="surname" value="<?=$user['Surname']?>">
 							</div>
 						</div>
 						<br/>
 						<div class="row">
 							<label class="control-label col-sm-2">Email:</label>
 							<div class="col-sm-6">
-								<input type="email" class="form-control" id="email" placeholder="Αλλαγή Email" name="email">
+								<input type="email" class="form-control" id="email" placeholder="Αλλαγή Email" name="email" value="<?=$login['email']?>">
 							</div>
 						</div>
 						<br/>
 						<div class="row">
 							<label class="control-label col-sm-2">Α.Φ.Μ.:</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" id="AFM" placeholder="Αλλαγή Α.Φ.Μ." name="AFM">
+								<input type="text" class="form-control" id="AFM" placeholder="Αλλαγή Α.Φ.Μ." name="AFM" value="<?=$user['AFM']?>">
 							</div>
 						</div>
 						<br/>
 						<div class="row">
 							<label class="control-label col-sm-2">Α.Μ.Κ.Α.:</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" id="AMKA" placeholder="Αλλαγή Α.Μ.Κ.Α." name="AMKA">
+								<input type="text" class="form-control" id="AMKA" placeholder="Αλλαγή Α.Μ.Κ.Α." name="AMKA" value="<?=$user['AMKA']?>">
 							</div>
 						</div>
 						<br/>
 						<div class="row">
 							<label class="control-label col-sm-2">Οδός Κατοικίας:</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" id="street" placeholder="Αλλαγή οδού" name="street">
+								<input type="text" class="form-control" id="street" placeholder="Αλλαγή οδού" name="street" value="<?=$user['street']?>">
 							</div>
 						</div>
 						<br/>
@@ -228,7 +228,7 @@
 					echo "<div class=\"col-md-6\">
 							<h3>Εργοδότης</h3>
 							<div class=\"well\">
-								<p style=\"font-size: large;\" >Είδος Σύνταξης: ".$boss['name']."</p>
+								<p style=\"font-size: large;\" >Όνομα Εργοδοσίας: ".$boss['name']."</p>
 							</div>
 						  </div>";
 				}
