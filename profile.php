@@ -108,6 +108,30 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="./css/custom.css">
     <link rel="stylesheet" href="./css/other.css" >
+    <style>
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #428bca;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -305,8 +329,53 @@
 							<div class=\"well\" id=\"wellinfo3\">
 								<p style=\"font-size: large;\" ><strong>Όνομα Εργοδοσίας:</strong> ".$boss['name']."</p>
                                 <p style=\"font-size: large;\" ><strong>ΔΟΥ Εργοδοσίας:</strong> ".$boss['DOY']."</p>
-                                <button type=\"button\" class=\"btn btn-primary\" id=\"nochange3\" onclick=\"show_auto3()\">Αλλαγή Στοιχείων</button>
 
+                                <button type=\"button\" class=\"btn btn-primary\" id=\"nochange3\" onclick=\"show_auto3()\">Αλλαγή Στοιχείων</button>
+                                <button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#employees\">
+                                  Εμφάνιση Εργαζομένων
+                                </button>
+                                <div class=\"modal fade\" id=\"employees\">
+                                  <div class=\"modal-dialog\" role=\"document\">
+                                    <div class=\"modal-content\">
+                                      <div class=\"modal-header\">
+                                        <h5 class=\"modal-title\">Εργαζόμενοι</h5>
+                                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Κλείσιμο\">
+                                          <span aria-hidden=\"true\">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class=\"modal-body\">
+                                      <table id=\"customers\">
+                                      <tr>
+                                        <th>ΟΝΟΜΑ</th>
+                                        <th>ΕΠΩΝΥΜΟ</th>
+                                        <th>ΑΡ. ΤΑΥΤΟΤΗΤΑΣ</th>
+                                        <th>ΑΠΟΔΟΧΕΣ</th>
+                                        <th>ΑΞΙΑ ΕΝΣΗΜΟΥ</th>
+                                      </tr>";
+                                      $query = "SELECT * FROM Employee WHERE company_id =".$login['ID'];
+                                      $employee_result = $conn -> query($query);
+                                      if(!$employee_result) die ($conn->error);
+                                      $rows = $employee_result->num_rows;
+                                      for ($i=0; $i < $rows; $i++) {
+                                          $employee_result->data_seek($i) ;
+                                          $row = $employee_result->fetch_array(MYSQLI_ASSOC);
+                                          echo "
+                                          <tr>
+                                          <td>".$row['name']."</td>
+                                          <td>".$row['surname']."</td>
+                                          <td>".$row['identifier']."</td>
+                                          <td>".$row['salary']."</td>
+                                          <td>".$row['stamp_value']."</td>
+                                          </tr>";
+                                      }
+                    echo "</table>
+                                    </div>
+                                      <div class=\"modal-footer\">
+                                        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Κλείσιμο</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
 							</div>
 						 <div class=\"well\" style=\"display:none;\" id=\"welledit3\">
                           <div class=\"row\">
@@ -332,7 +401,8 @@
                               </div>
                           </div>
                       </div>
-                      </div>";
+                      </div>
+                      ";
 				}
 			 ?>
 			<?php
