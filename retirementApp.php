@@ -219,8 +219,11 @@
                      <br/>
                      <div class="row">
                         <div class="col-sm-6">
-                           <button type="submit" class="btn btn-default">Υποβολή Αιτήματος</button>
+                           <button type="submit" class="btn btn-primary">Υποβολή Αιτήματος</button>
                         </div>
+                        <div class="col-sm-2">
+                           <button  onclick="window.location = '/IKA/pension.php';" type="button" class="btn btn-danger">Επιστροφή</button>
+                       </div>
                      </div>
                   </div>
                </div>
