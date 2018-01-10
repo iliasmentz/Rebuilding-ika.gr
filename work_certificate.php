@@ -122,11 +122,11 @@
                        $row = $employee_result->fetch_array(MYSQLI_ASSOC);
                        echo "
                        <tr>
-                       <td>".$row->name."</td>
-                       <td>".$row->surname."</td>
-                       <td>".$row->identifier."</td>
-                       <td>".$row->salary."</td>
-                       <td>".$row->stamp_value."</td>
+                       <td>".$row['name']."</td>
+                       <td>".$row['surname']."</td>
+                       <td>".$row['identifier']."</td>
+                       <td>".$row['salary']."</td>
+                       <td>".$row['stamp_value']."</td>
                        </tr>";
                    }
                ?>
