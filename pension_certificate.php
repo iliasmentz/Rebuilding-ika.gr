@@ -58,42 +58,42 @@
       <div class="container">
             <p >
                 <div style="font-size: small">
-                    ΥΠΟΚΑΤΑΣΤΗΜΑ : <?=$user['DOY']?>
+                <strong>    ΥΠΟΚΑΤΑΣΤΗΜΑ </strong>: <?=$user['DOY']?>
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    ΚΑΤΗΓΟΡΙΑ : <?=$pension['type']?>
+                <strong>    ΚΑΤΗΓΟΡΙΑ :</strong> <?=$pension['type']?>
                 </div>
             </p>
             <p>
                 <div style="font-size: small">
-                    Α.Μ.Κ.Α. :   <?=$user['AMKA']?>
+                    <strong>Α.Μ.Κ.Α. : </strong>  <?=$user['AMKA']?>
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    Α.Φ.Μ. :  <?=$user['AFM']?>
+                    <strong>Α.Φ.Μ. :</strong>  <?=$user['AFM']?>
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    ΟΝΟΜΑ : <?=$user['Name']?>
+                    <strong>ΟΝΟΜΑ : </strong><?=$user['Name']?>
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    ΕΠΩΝΥΜΟ : <?=$user['Surname']?>
+                    <strong>ΕΠΩΝΥΜΟ :</strong> <?=$user['Surname']?>
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    ΤΑΧΥΔΡΟΜΙΚΗ ΔΙΕΥΘΥΝΣΗ : <?=$user['street']?>
+                    <strong>ΤΑΧΥΔΡΟΜΙΚΗ ΔΙΕΥΘΥΝΣΗ :</strong> <?=$user['street']?>
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    ΠΟΣΟ ΣΥΝΤΑΞΗΣ : <?=$pension['amount']?>
+                    <strong>ΠΟΣΟ ΣΥΝΤΑΞΗΣ : </strong><?=$pension['amount']?>
                 </div>
             </p>
       </div>

@@ -86,22 +86,22 @@
           <h3>Στοιχεία Εργοδότη</h3>
             <p >
                 <div style="font-size: small">
-                    ΕΠΩΝΥΜΟ ΕΡΓΟΔΟΤΗ : <?=$user['Surname']?>
+                    <strong>ΕΠΩΝΥΜΟ ΕΡΓΟΔΟΤΗ : </strong><?=$user['Surname']?>
+				</div>
+            </p>
+            <p >
+                <div style="font-size: small">
+                    <strong>Α.Φ.Μ. ΕΡΓΟΔΟΤΗ: </strong><?=$user['AFM']?>
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    Α.Φ.Μ. ΕΡΓΟΔΟΤΗ: <?=$user['AFM']?>
+                    <strong>ΟΝΟΜΑ ΕΡΓΟΔΟΣΙΑΣ:</strong> <?=$work['name']?>
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    Όνομα Εργοδοσίας: <?=$work['name']?>
-                </div>
-            </p>
-            <p >
-                <div style="font-size: small">
-                    ΔΟΥ Εργοδοσίας: <?=$work['DOY']?>
+                    <strong>ΔΟΥ ΕΡΓΟΔΟΣΙΑΣ:</strong> <?=$work['DOY']?>
                 </div>
             </p>
             <br/>
