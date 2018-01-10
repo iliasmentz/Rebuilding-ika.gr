@@ -21,6 +21,7 @@
 	$result->data_seek(0);
 	$login=$result->fetch_array(MYSQLI_ASSOC);
     if($login['type']==2 or $login['type']==3){
+        $_SESSION['pension_message']='Είστε ήδη συνταξιούχος';
         header("location:pension.php");
         die();
     }
@@ -30,6 +31,7 @@
 	$result->data_seek(0);
 	$login=$result->fetch_array(MYSQLI_ASSOC);
     if($result->num_rows!=0){
+        $_SESSION['pension_message']='Έχετε κάνει ήδη αίτηση συνταξιοδότησης';
         header("location:pension.php");
         die();
     }
@@ -47,6 +49,8 @@
         $query = "INSERT INTO pension_request (ID,AFM,AMKA,identifier,name,surname) Values(".$_SESSION['id'].",'$afm','$amka','$identifier','$name','$surname')";
         $result = $conn -> query($query);
         if(!$result) echo " INSERT failed $query<br>". $conn->error;
+        $_SESSION['welcome']='Το αίτημα συνταξιοδότησης έγινε δεκτό';
+        header("location:profile.php");
     }
  ?>
 <html>

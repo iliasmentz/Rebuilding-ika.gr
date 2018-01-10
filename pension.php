@@ -106,7 +106,11 @@
         </ul>
 	</nav>
 
-<div class="mymenu">
+<div class="mymenu"><?
+    if (array_key_exists('pension_message', $_SESSION)) {
+            echo "<h1 style=\"text-align:center; color:red; \">".$_SESSION['pension_message']."</h1>";
+            $_SESSION['pension_message']='';
+        }?>
     <h1 style="text-align:center;"> Σύνταξη </h1>
     <br/>
     <br/>

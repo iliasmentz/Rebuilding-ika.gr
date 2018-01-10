@@ -21,7 +21,9 @@
 	$result->data_seek(0);
 	$login=$result->fetch_array(MYSQLI_ASSOC);
 	if($login['type']!=2 and $login['type']!=3){
-		die("You are not a retiree");
+		$_SESSION['pension_message']='Δεν είστε συνταξιούχος για να εκτυπώσετε βεβαίωση';
+		header("location: pension.php");
+		die();
 	}
     $query = "SELECT * FROM User WHERE ID =".$login['ID'];
 	$result = $conn -> query($query);

@@ -84,6 +84,8 @@
             die();
         }else{
             $_SESSION['message']="Οι κωδικοί δεν ταιριάζουν";
+            header("location: user_register.php");
+            die();
         }
     }
  ?>
