@@ -114,8 +114,8 @@
                      </div>
                      <div class="row col-sm-8" >
                         <select class="form-control" id="sel2" name="sel2">
-                           <option>Γεράματος</option>
-                           <option>Αναπυρίας</option>
+                           <option>Γήρατος</option>
+                           <option>Αναπηρίας</option>
                            <option>Θάνατος Ασφαλισμένου</option>
                            <option>Θάνατος Συνταξιούχου</option>
                         </select>

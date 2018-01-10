@@ -4,11 +4,14 @@
 	if(!array_key_exists('login', $_SESSION)){
 		$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
 		header("location:login.php");
+		die();
 	}
 	if($_SESSION['login']!=1){
 			$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
 			header("location:login.php");
+			die();
 	}
+	$_SESSION['message_register']='';
 	require_once 'login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
     if($conn->connect_error) die($conn->connect_error);
@@ -71,6 +74,7 @@
 		}
 
 		header("location: profile.php");
+		die();
 	}
  ?>
 <head>

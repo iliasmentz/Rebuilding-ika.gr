@@ -5,6 +5,7 @@
     if(array_key_exists('login', $_SESSION)){
         if($_SESSION['login']==1){
             header("location:index.php");
+            die();
         }
 	}
     $_SESSION['message']='';
@@ -31,6 +32,7 @@
                 $_SESSION['username'] = $user['Name'];
                 $_SESSION['id'] = $user['ID'];
                 header("location:index.php");
+                die();
             }else{
                 $_SESSION['message']='Ο κωδικός είναι λάθος';
             }

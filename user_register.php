@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <?php
     session_start();
-    $_SESSION['message']='';
     require_once 'login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
     mysqli_set_charset($conn,'utf8');
     if($conn->connect_error) die($conn->connect_error);
     mysqli_set_charset($conn,'utf8');
     if($_SERVER['REQUEST_METHOD']=='POST'){
+        $_SESSION['message']='';
         $email = $_POST['Email'];
         $query = "SELECT * FROM Login WHERE email='$email'";
         $result = $conn -> query($query);
         if(!$result) die ($conn->error);
         if($result->num_rows!=0){
             $_SESSION['message']='Το email υπάρχει';
+            header("location: user_register.php");
+            die();
+        }
+        $id = $_POST['ID'];
+        $query = "SELECT * FROM User WHERE ID='$id'";
+        $result = $conn -> query($query);
+        if(!$result) die ($conn->error);
+        if($result->num_rows!=0){
+            $_SESSION['message']='Ο αριθμός ασφαλισμένου είναι ήδη εγγεγραμμένο';
+            header("location: user_register.php");
+            die();
         }
         if($_POST['Pwd']==$_POST['RePwd']){
             $username = $_POST['Username'];
@@ -21,7 +32,6 @@
             $amka = $_POST['AMKA'];
             $afm = $_POST['AFM'];
             $doy = $_POST['DOY'];
-            $id = $_POST['ID'];
             $street = $_POST['street'];
             $password = $_POST['Pwd'];
             $var = 0;
@@ -45,16 +55,33 @@
             $query ="INSERT INTO Login VALUES" . "('$email','$password','$var','$id')";
             $result = $conn -> query($query);
             if(!$result) echo " INSERT failed $query<br>". $conn->error;
-            $payment = rand ( 100,1000 );
-            $type = "Ηλικιωμένος";
-            $query ="INSERT INTO Pension VALUES" . "('$payment','$id','$type')";
-            $result = $conn -> query($query);
-            if(!$result) echo " INSERT failed $query<br>". $conn->error;
+            if($var == 2 || $var == 3 ){
+                $payment = rand ( 100,1000 );
+                $tempType = rand (1,4);
+                if($tempType==1){
+                    $type = "Γήρατος";
+                }else if($tempType==2){
+                    $type = "Αναπηρίας";
+                }else if($tempType==3){
+                    $type= "Θάνατος Ασφαλισμένου";
+                }else{
+                    $type= "Θάνατος Συνταξιούχου";
+                }
+                $query ="INSERT INTO Pension VALUES" . "('$payment','$id','$type')";
+                $result = $conn -> query($query);
+                if(!$result) echo " INSERT failed $query<br>". $conn->error;
+            }
+            if($var == 1 || $var == 3){
+                $query ="INSERT INTO Company(ID) VALUES" . "('$id')";
+                $result = $conn -> query($query);
+                if(!$result) echo " INSERT failed $query<br>". $conn->error;
+            }
             $_SESSION['welcome']="Μόλις δημιουργήθηκε ο λογαριασμός σας";
             $_SESSION['login'] = 1;
             $_SESSION['username'] = $username;
             $_SESSION['id'] = $id;
             header("location:profile.php");
+            die();
         }else{
             $_SESSION['message']="Οι κωδικοί δεν ταιριάζουν";
         }
@@ -97,7 +124,7 @@
         <div class="card card-container">
             <h2 class='login_title text-center'><b>Εγγραφή</b></h2>
             <form class="form-signin" method="post" action="user_register.php" onsubmit="return checkInp()" name="myForm">
-                <h2><font color="red"><?=$_SESSION['message']?></font></h2>
+                <h2><font color="red"><?=$_SESSION['message']?><?$_SESSION['message']='';?></font></h2>
                 <span id="reauth-email" class="reauth-email"></span>
                 <p class="input_title">Email(*)</p>
                 <input type="email" id="inputEmail" oninput="remobeBorder(this)" class="login_box" placeholder="user01@email.com" name="Email" required="True" autofocus="True"/>
