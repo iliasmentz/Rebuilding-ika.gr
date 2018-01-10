@@ -1,4 +1,54 @@
 <!DOCTYPE html>
+<?php session_start();
+    if(!array_key_exists('login', $_SESSION)){
+        $_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
+        header("location:login.php");
+        die();
+    }
+    if($_SESSION['login']!=1){
+        $_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
+        header("location:login.php");
+        die();
+    }
+    require_once 'login_db.php';
+    $conn = new mysqli($hn,$un,$pw,$db);
+    mysqli_set_charset($conn,'utf8');
+    if($conn->connect_error) die($conn->connect_error);
+    mysqli_set_charset($conn,'utf8');
+    $query = "SELECT * FROM Login WHERE ID =".$_SESSION['id'];
+	$result = $conn -> query($query);
+	if(!$result) die ($conn->error);
+	$result->data_seek(0);
+	$login=$result->fetch_array(MYSQLI_ASSOC);
+    if($login['type']==2 or $login['type']==3){
+        header("location:pension.php");
+        die();
+    }
+    $query = "SELECT * FROM pension_request WHERE ID =".$_SESSION['id'];
+	$result = $conn -> query($query);
+	if(!$result) die ($conn->error);
+	$result->data_seek(0);
+	$login=$result->fetch_array(MYSQLI_ASSOC);
+    if($result->num_rows!=0){
+        header("location:pension.php");
+        die();
+    }
+    $query = "SELECT * FROM User WHERE ID =".$_SESSION['id'];
+	$result = $conn -> query($query);
+	if(!$result) die ($conn->error);
+	$result->data_seek(0);
+	$user=$result->fetch_array(MYSQLI_ASSOC);
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $afm = $_POST['AFM'];
+        $amka = $_POST['AMKA'];
+        $identifier = $_POST['identifier'];
+        $query = "INSERT INTO pension_request (ID,AFM,AMKA,identifier,name,surname) Values(".$_SESSION['id'].",'$afm','$amka','$identifier','$name','$surname')";
+        $result = $conn -> query($query);
+        if(!$result) echo " INSERT failed $query<br>". $conn->error;
+    }
+ ?>
 <html>
    <head>
       <title>Retirement Application</title>
@@ -12,6 +62,7 @@
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="./css/custom.css">
       <link rel="stylesheet" href="./css/other.css" >
+       <script src="./js/pension.js"></script>
    </head>
    <body>
       <nav class="navbar navbar-inverse">
@@ -35,7 +86,6 @@
                   <a href="#">Γλώσσα</a>
                </li>
                <li>
-                   <?php session_start(); ?>
                    <?
                    if (array_key_exists('login', $_SESSION)) {
                        if($_SESSION['login']==1){
@@ -94,7 +144,7 @@
          <div class="row">
             <h3>Στοιχεία Αιτήματος</h3>
             </br>
-            <form class="" action="" method="get">
+            <form action="retirementApp.php" onsubmit="return checkInp()" method="post" name="myForm" id="myForm">
                <div class="col-md-6">
                   <div class="well" id="wellratio">
                      <div class="row">
@@ -134,11 +184,11 @@
                      </br>
                      </br>
                      <div class="row">
-                        <label class="control-label col-sm-12">Αριθμός Εγγράφου:</label>
+                        <label class="control-label col-sm-12">Αριθμός Εγγράφου(*):</label>
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="document" placeholder="ΑΙ1212" name="document"  required="true" autofocus="true">
+                           <input type="text" class="form-control" id="identifier" placeholder="ΑΙ1212" name="identifier"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -148,10 +198,10 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="region" placeholder="Αττική" name="region"  required="true" autofocus="true">
+                           <input type="text" class="form-control" id="region" placeholder="Αττική" name="region" >
                         </div>
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="city" placeholder="Αθήνα" name="city"  required="true" autofocus="true">
+                           <input type="text" class="form-control" id="city" placeholder="Αθήνα" name="city" >
                         </div>
                      </div>
                      <br/>
@@ -161,10 +211,10 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="street" placeholder="Ευδόξου" name="document"  required="true" autofocus="true">
+                           <input type="text" class="form-control" id="street" placeholder="Ευδόξου" name="document" >
                         </div>
                         <div class="col-sm-3">
-                           <input type="number" min="1"  class="form-control" id="streetnumber" placeholder="13" name="streetnumber"  required="true" autofocus="true">
+                           <input type="number" min="1"  class="form-control" id="streetnumber" placeholder="13" name="streetnumber" >
                         </div>
                      </div>
                      <br/>
@@ -173,47 +223,38 @@
                <div class="col-md-6">
                   <div class="well" id="welledit">
                      <div class="row">
-                        <label class="control-label col-sm-12">Ημερομηνία Γέννησης</label>
-                     </div>
-                     <div class="row">
-                         <div class="col-sm-6">
-                             <input id="input-date" type="date" value="1996-04-09"  required="true" autofocus="true">
-                         </div>
-                     </div>
-                     <br/>
-                     <div class="row">
-                        <label class="control-label col-sm-12">ΑΦΜ:</label>
+                        <label class="control-label col-sm-12 ">ΑΦΜ(*):</label>
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="afm" placeholder="ΑΦΜ" name="afm"  required="true" autofocus="true">
+                           <input type="text" class="form-control" value="<?=$user['AFM']?>" oninput="remobeBorder(this)" placeholder="ΑΦΜ" name="AFM" id="AFM"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
                      <div class="row">
-                        <label class="control-label col-sm-12">AMKA:</label>
+                        <label class="control-label col-sm-12">AMKA(*):</label>
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="amka" placeholder="ΑΜΚΑ" name="amka"  required="true" autofocus="true">
+                           <input type="text" class="form-control" value="<?=$user['AMKA']?>" oninput="remobeBorder(this)" placeholder="ΑΜΚΑ" name="AMKA" id="AMKA"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
                      <div class="row">
-                        <label class="control-label col-sm-12">Επώνυμο:</label>
+                        <label class="control-label col-sm-12">Επώνυμο(*):</label>
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="surname" placeholder="Πλακιάς" name="surname"  required="true" autofocus="true">
+                           <input type="text" class="form-control" value="<?=$user['Surname']?>" id="surname" placeholder="Πλακιάς" name="surname"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
                      <div class="row">
-                        <label class="control-label col-sm-12">Όνομα:</label>
+                        <label class="control-label col-sm-12">Όνομα(*):</label>
                      </div>
                      <div class="row">
                         <div class="col-sm-8">
-                           <input type="text" class="form-control" id="onoma" placeholder="Απόστολος" name="onoma"  required="true" autofocus="true">
+                           <input type="text" class="form-control" value="<?=$user['Name']?>" id="name" placeholder="Απόστολος" name="name"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>

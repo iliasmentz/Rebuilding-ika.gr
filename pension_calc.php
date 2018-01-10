@@ -94,7 +94,7 @@
 			<h1>Υπολογισμός Σύνταξης</h1>
 		</div>
         <div class="row">
-        <h3>Στοιχεία Μελλοντικού Συνταξιούχου</h3>
+        <h3>Στοιχεία για υπολογισμό μελλοντικής σύνταξης</h3>
         </br>
         <form class="" action="" method="get" onsubmit="return false" >
 
@@ -119,8 +119,8 @@
 						</div>
 						<div class="row col-sm-6" >
 							<select class="form-control" id="sel2" name="sel2">
-								<option value="1">Γεράματος</option>
-								<option value="1.5">Αναπυρίας</option>
+								<option value="1">Γήρατος</option>
+								<option value="1.5">Αναπηρίας</option>
 								<option value="1.2">Θάνατος Ασφαλισμένου</option>
 								<option value="1.1">Θάνατος Συνταξιούχου</option>
 							</select>
