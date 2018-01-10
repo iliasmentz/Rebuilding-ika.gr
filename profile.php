@@ -181,7 +181,7 @@
 					<p style="font-size: large;" ><strong>Α.Φ.Μ.:</strong> <?=$user['AFM']?></p>
 					<p style="font-size: large;" ><strong>Α.Μ.Κ.Α.:</strong> <?=$user['AMKA']?></p>
 					<p style="font-size: large;" ><strong>Οδός Κατοικίας:</strong> <?=$user['street']?></p>
-					<button type="button"  class="btn btn-link btn-xs" id="nochange" onclick="show_auto()">Αλλαγή Στοιχείων</button>
+					<button type="button" class="btn btn-primary" id="nochange" onclick="show_auto()">Αλλαγή Στοιχείων</button>
 		          </div>
 				  <div class="well" style="display:none;" id="welledit">
 				  	<form class="" action="profile.php" method="post">
@@ -229,10 +229,10 @@
 						<br/>
 						<div class="row">
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-default" name="user_info">Υποβολή</button>
+								<button type="submit" class="btn btn-primary" name="user_info">Υποβολή</button>
 							</div>
 							<div class="col-sm-2">
-								<button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>
+								<button  onclick="hide_auto()" type="button" class="btn btn-danger">Ακύρωση</button>
 							</div>
 						</div>
 
@@ -241,9 +241,9 @@
 			<div class="col-md-6">
 				<h3>Ασφάλιση</h3>
 				<div class="well" id="wellinfo2">
-					<p style="font-size: large;" >Αριθμός Μητρώου Ασφάλισης: <?=$user['ID']?> </p>
-					<p style="font-size: large;" >ΔΟΥ: <?=$user['DOY']?> </p>
-                    <button type="button"  class="btn btn-link btn-xs" id="nochange2" onclick="show_auto2()">Αλλαγή Στοιχείων</button>
+					<p style="font-size: large;" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong> <?=$user['ID']?> </p>
+					<p style="font-size: large;" ><strong>ΔΟΥ:</strong> <?=$user['DOY']?> </p>
+                    <button type="button"  class="btn btn-primary" id="nochange2" onclick="show_auto2()">Αλλαγή Στοιχείων</button>
                 </div>
                 <div class="well" style="display:none;" id="welledit2">
                         <div class="row">
@@ -262,10 +262,10 @@
                         </br>
                         <div class="row">
                             <div class="col-sm-6">
-                                <button type="submit" class="btn btn-default" name="user_info">Υποβολή</button>
+                                <button type="submit" class="btn btn-primary" name="user_info">Υποβολή</button>
                             </div>
                             <div class="col-sm-2">
-                                <button  onclick="hide_auto2()" type="button" class="btn btn-default">Ακύρωση</button>
+                                <button  onclick="hide_auto2()" type="button" class="btn btn-danger">Ακύρωση</button>
                             </div>
                         </div>
                     </form>
@@ -283,7 +283,7 @@
 					echo "<div class=\"col-md-6\">
 							<h3>Εργοδότης</h3>
 							<div class=\"well\">
-								<p style=\"font-size: large;\" >Όνομα Εργοδοσίας: ".$boss['name']."</p>
+								<p style=\"font-size: large;\" ><strong>Όνομα Εργοδοσίας:</strong> ".$boss['name']."</p>
 							</div>
 						  </div>";
 				}
@@ -298,8 +298,8 @@
 					echo "<div class=\"col-md-6\">
 							<h3>Σύνταξη</h3>
 							<div class=\"well\">
-								<p style=\"font-size: large;\" >Είδος Σύνταξης: ".$pension['type']."</p>
-								<p style=\"font-size: large;\" >Ποσό Σύνταξης: ".$pension['amount']."</p>
+								<p style=\"font-size: large;\" ><strong>Είδος Σύνταξης:</strong> ".$pension['type']."</p>
+								<p style=\"font-size: large;\" ><strong>Ποσό Σύνταξης:</strong> ".$pension['amount']."</p>
 							</div>
 						  </div>";
 				}
