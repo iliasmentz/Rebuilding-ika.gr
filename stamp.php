@@ -191,12 +191,12 @@
                     </br>
                         <div class="row">
                             <div class="col-sm-6">
-                                <button onclick="stamp_calc()" type="submit" class="btn btn-default">Υπολογισμός</button>
+                                <button onclick="stamp_calc()" type="submit" class="btn btn-primary">Υπολογισμός</button>
                             </div>
+                            <div class="col-sm-2">
+                               <button  onclick="window.location = '/IKA/business.php';" type="button" class="btn btn-danger">Επιστροφή</button>
+                           </div>
 
-                            <!-- <div class="col-sm-2">
-                            <button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>
-                        </div> -->
                     </div>
 
                     </div>
@@ -217,7 +217,7 @@
 
           var total = days*price*hours + extrahours*price;
 
-          myHeader.innerText ="Συνολική αξία ενσήμων: " + total + "€";
+          myHeader.innerText ="Συνολική αξία ενσήμων: " +  total + "€";
           document.getElementById("result").style.display="block";
       }
       function hide_auto(){
