@@ -4,12 +4,10 @@
 	if(!array_key_exists('login', $_SESSION)){
 		$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
 		header("location:login.php");
-		die();
 	}
 	if($_SESSION['login']!=1){
 			$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
 			header("location:login.php");
-			die();
 	}
     require_once 'login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
@@ -23,13 +21,52 @@
     if($login['type']!=1 and $login['type']!=3){
         die("You are not a boss");
     }
+
+    $query = "SELECT * FROM User WHERE ID =".$login['ID'];
+    $result = $conn -> query($query);
+    if(!$result) die ($conn->error);
+    $result->data_seek(0);
+    $user=$result->fetch_array(MYSQLI_ASSOC);
+
+    $query = "SELECT * FROM Company WHERE ID =".$login['ID'];
+    $result = $conn -> query($query);
+    if(!$result) die ($conn->error);
+    $result->data_seek(0);
+    $work=$result->fetch_array(MYSQLI_ASSOC);
+
+    $query = "SELECT * FROM Employee WHERE company_id =".$login['ID'];
+    $employee_result = $conn -> query($query);
+    if(!$employee_result) die ($conn->error);
 ?>
   <head>
     <title>Certificate</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <style>
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #428bca;
+            color: white;
+        }
+    </style>
   </head>
 
   <body>
@@ -49,47 +86,54 @@
           <h3>Στοιχεία Εργοδότη</h3>
             <p >
                 <div style="font-size: small">
-                    ΕΠΩΝΥΜΟ ΕΡΓΟΔΟΤΗ :
+                    ΕΠΩΝΥΜΟ ΕΡΓΟΔΟΤΗ : <?=$user['Surname']?>
                 </div>
             </p>
             <p >
                 <div style="font-size: small">
-                    Α.Φ.Μ. ΕΡΓΟΔΟΤΗ:
+                    Α.Φ.Μ. ΕΡΓΟΔΟΤΗ: <?=$user['AFM']?>
+                </div>
+            </p>
+            <p >
+                <div style="font-size: small">
+                    Όνομα Εργοδοσίας: <?=$work['name']?>
+                </div>
+            </p>
+            <p >
+                <div style="font-size: small">
+                    ΔΟΥ Εργοδοσίας: <?=$work['DOY']?>
                 </div>
             </p>
             <br/>
-            <h3>Στοιχεία Εργαζομένου </h3>
-            <p >
-                <div style="font-size: small">
-                    ΟΝΟΜΑΤΕΠΩΝΥΜΟ :
-                </div>
-            </p>
-            <p>
-                <div style="font-size: small">
-                    Α.Μ.Κ.Α. :
-                </div>
-            </p>
-            <p >
-                <div style="font-size: small">
-                    Α.Φ.Μ. :
-                </div>
-            </p>
-            <p >
-                <div style="font-size: small">
-                    ΩΡΕΣ ΕΡΓΑΣΙΑΣ :
-                </div>
-            </p>
-            <p >
-                <div style="font-size: small">
-                    ΚΥΡΙΑΚΕΣ :
-                </div>
-            </p>
-            <p >
-                <div style="font-size: small">
-                    ΑΠΟΔΟΧΕΣ :
-                </div>
-            </p>
+            <h3>Στοιχεία Εργαζομένων </h3>
+            <table id="customers">
+              <tr>
+                <th>ΟΝΟΜΑ</th>
+                <th>ΕΠΩΝΥΜΟ</th>
+                <th>ΑΡ. ΤΑΥΤΟΤΗΤΑΣ</th>
+                <th>ΑΠΟΔΟΧΕΣ</th>
+                <th>ΑΞΙΑ ΕΝΣΗΜΟΥ</th>
+              </tr>
+               <?php
+
+                   $rows = $employee_result->num_rows;
+                   for ($i=0; $i < $rows; $i++) {
+                       $employee_result->data_seek($i) ;
+                       $row = $employee_result->fetch_array(MYSQLI_ASSOC);
+                       echo "
+                       <tr>
+                       <td>".$row->name."</td>
+                       <td>".$row->surname."</td>
+                       <td>".$row->identifier."</td>
+                       <td>".$row->salary."</td>
+                       <td>".$row->stamp_value."</td>
+                       </tr>";
+                   }
+               ?>
+          </table>
+
       </div>
+    </br>
       <script>
         function Myprint() {
             window.print();
