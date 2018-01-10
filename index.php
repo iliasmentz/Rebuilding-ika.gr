@@ -57,7 +57,7 @@
         <div class="c-fi-wrapper">
             <div class="c-fi-grid">
                 <div class="c-fi-cell hero">
-                    <a class="c-fi-link ga-event" data-event-action="Feature Hero Image Click" href="/onlineservices/" style="background-image:url(./img/security-cover.jpg)">
+                    <a class="c-fi-link ga-event" data-event-action="Feature Hero Image Click" href="./profile.php" style="background-image:url(./img/security-cover.jpg)">
                         <div class="c-fi-text">Ασφάλεια</div>
                     </a>
                 </div>
@@ -74,12 +74,12 @@
                             </a>
                         </div>
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/benefits/medicare/prescriptionhelp/" style="background-image:url(./img/debt-cover.jpg)">
-                                <div class="c-fi-text">Οφειλές</div>
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="#" style="background-image:url(./img/doctors.jpg)">
+                                <div class="c-fi-text">Γιατροί</div>
                             </a>
                         </div>
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="https://faq.ssa.gov/ics/support/KBAnswer.asp?questionID=3704" style="background-image:url(./img/disability-cover.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="#" style="background-image:url(./img/disability-cover.jpg)">
                                 <div class="c-fi-text">Άτομα με ειδικές αναπηρίες</div>
                             </a>
                         </div>
@@ -94,19 +94,19 @@
         <div class="m-row">
 
           <div class="mb3 m-col m-fx m-ta-c l-w-25">
-            <a class=" selection-sub-menu bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="Social Security Number" href="/ssnumber/">
+            <a class=" selection-sub-menu bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="Social Security Number" href="#">
               <img alt="" class="dn m-db mx-auto my3 svg6" src="./img/newsfeed.png">
               <p class="link-color fw5 mb2">Ενημερώσεις</p>
             </a>
           </div>
           <div class="mb3 m-col m-fx m-ta-c l-w-25">
-              <a class="selection-sub-menu bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="my Social Security" href="/myaccount/">
+              <a class="selection-sub-menu bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="my Social Security" href="#">
                   <img alt="" class="dn m-db mx-auto my3 svg6" src="./img/faq.png">
                   <p class="link-color fw5 mb2">Συχνές Ερωτήσεις</p>
               </a>
         </div>
           <div class="mb3 m-col m-fx m-ta-c m-mb0  l-w-25">
-            <a class="selection-sub-menu bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="Frequently Asked Questions" href="/ask/">
+            <a class="selection-sub-menu bg-white bs1 db ga-event pa3 l-bg-clear l-bs0 l-pa0" data-event-action="Feature Icon Click" data-event-label="Frequently Asked Questions" href="#">
               <img alt="" class="dn m-db mx-auto my3 svg6" src="./img/contact.png">
               <p class="link-color fw5 mb2">Επικοινωνία</p>
             </a>
