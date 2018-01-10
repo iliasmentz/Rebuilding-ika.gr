@@ -1,4 +1,55 @@
 <!DOCTYPE html>
+<?php session_start();
+    if(!array_key_exists('login', $_SESSION)){
+        $_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
+        header("location:login.php");
+        die();
+    }
+    if($_SESSION['login']!=1){
+        $_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
+        header("location:login.php");
+        die();
+    }
+    require_once 'login_db.php';
+    $conn = new mysqli($hn,$un,$pw,$db);
+    mysqli_set_charset($conn,'utf8');
+    if($conn->connect_error) die($conn->connect_error);
+    mysqli_set_charset($conn,'utf8');
+    $query = "SELECT * FROM Login WHERE ID =".$_SESSION['id'];
+	$result = $conn -> query($query);
+	if(!$result) die ($conn->error);
+	$result->data_seek(0);
+	$login=$result->fetch_array(MYSQLI_ASSOC);
+	if($login['type']!=1 and $login['type']!=3){
+        $_SESSION['welcome']="Μολίς γίνατε εργοδότης.";
+		if($login['type']==0){
+            $var=1;
+        }else{
+            $var=3;
+        }
+        $query = "UPDATE Login SET type ='$var' WHERE Login.ID =".$_SESSION['id'];
+        $result = $conn -> query($query);
+        if(!$result) die ($conn->error);
+
+        $query ="INSERT INTO Company(ID) VALUES" . "(".$_SESSION['id'].")";
+        $result = $conn -> query($query);
+        if(!$result) echo " INSERT failed $query<br>". $conn->error;
+	}
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+        $name = $_POST['name'];
+        $surname = $_POST['surname'];
+        $identifier = $_POST['identifier'];
+        $salary = $_POST['salary'];
+        $stamp = $_POST['stamp'];
+
+        $query = "INSERT INTO Employee (company_id,name,surname,identifier,salary,stamp_value) Values(".$_SESSION['id'].",'$name','$surname','$identifier','$salary','$stamp')";
+        $result = $conn -> query($query);
+        if(!$result) echo " INSERT failed $query<br>". $conn->error;
+        $_SESSION['welcome']=$_SESSION['welcome']." Η πρόσληψη έγινε επιτυχώς";
+        header("location:profile.php");
+        die();
+    }
+?>
 <html>
    <head>
       <title>Πρόσληψη Εργαζομένου</title>
@@ -35,7 +86,6 @@
                   <a href="#">Γλώσσα</a>
                </li>
                <li>
-                   <?php session_start(); ?>
                    <?
                    if (array_key_exists('login', $_SESSION)) {
                        if($_SESSION['login']==1){
@@ -97,7 +147,7 @@
             <div class="col-md-8">
                <h3>Στοιχεία εργαζομένου</h3>
 
-               <form class="" action="" method="get">
+               <form class="" action="hire.php" method="post">
                   <div class="well" id="welledit">
 
                       <div class="row">
@@ -118,7 +168,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="workage" placeholder="Όνομα" name="workage"  required="true" autofocus="true">
+                           <input type="text" class="form-control" id="name" placeholder="Όνομα" name="name"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -127,7 +177,7 @@
                         </div>
                         <div class="row">
                            <div class="col-sm-6">
-                              <input type="text" class="form-control" id="workage" placeholder="Επίθετο" name="workage"  required="true" autofocus="true">
+                              <input type="text" class="form-control" id="surname" placeholder="Επίθετο" name="surname"  required="true" autofocus="true">
                            </div>
                         </div>
                         <br/>
@@ -136,7 +186,7 @@
                     </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input type="text" class="form-control" id="code" placeholder="ΧΧ ΧΧΧΧΧΧ" name="code"  required="true" autofocus="true">
+                           <input type="text" class="form-control" id="identifier" placeholder="ΧΧ ΧΧΧΧΧΧ" name="identifier"  required="true" autofocus="true">
                         </div>
                      </div>
                      <br/>
@@ -145,7 +195,7 @@
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
-                           <input id="input-date" type="date" id="birthday" placeholder="ΜΜ/ηη/ΧΧΧΧ" name="birtdate"  required="true" autofocus="true">
+                           <input id="input-date" type="date" id="birthday" placeholder="ΜΜ/ηη/ΧΧΧΧ" name="birtdate">
                         </div>
                      </div>
                      <br/>

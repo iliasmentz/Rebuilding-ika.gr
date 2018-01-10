@@ -20,6 +20,9 @@
 	if(!$result) die ($conn->error);
 	$result->data_seek(0);
 	$login=$result->fetch_array(MYSQLI_ASSOC);
+	if($login['type']!=2 and $login['type']!=3){
+		die("You are not a retiree");
+	}
     $query = "SELECT * FROM User WHERE ID =".$login['ID'];
 	$result = $conn -> query($query);
 	if(!$result) die ($conn->error);
@@ -30,9 +33,6 @@
 	if(!$result) die ($conn->error);
 	$result->data_seek(0);
 	$pension=$result->fetch_array(MYSQLI_ASSOC);
-    if($login['type']!=2 and $login['type']!=3){
-        die("You are not a retiree");
-    }
 ?>
   <head>
     <title>Certificate</title>
