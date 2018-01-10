@@ -332,16 +332,16 @@
 
                                 <button type=\"button\" class=\"btn btn-primary\" id=\"nochange3\" onclick=\"show_auto3()\">Αλλαγή Στοιχείων</button>
                                 <button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#employees\">
-                                  Εμφάνιση Εργαζομένων
-                                </button>
+                                  Εμφάνιση Εργαζομένων</button>
                                 <div class=\"modal fade\" id=\"employees\">
                                   <div class=\"modal-dialog\" role=\"document\">
                                     <div class=\"modal-content\">
                                       <div class=\"modal-header\">
-                                        <h5 class=\"modal-title\">Εργαζόμενοι</h5>
+                                        <h5 class=\"modal-title\">Εργαζόμενοι
                                         <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Κλείσιμο\">
                                           <span aria-hidden=\"true\">&times;</span>
                                         </button>
+                                        </h5>
                                       </div>
                                       <div class=\"modal-body\">
                                       <table id=\"customers\">
