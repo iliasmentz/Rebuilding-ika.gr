@@ -27,6 +27,11 @@
 	if(!$result) die ($conn->error);
 	$result->data_seek(0);
 	$user=$result->fetch_array(MYSQLI_ASSOC);
+	$query = "SELECT * FROM Company WHERE ID =".$login['ID'];
+	$result = $conn -> query($query);
+	if(!$result) die ($conn->error);
+	$result->data_seek(0);
+	$boss=$result->fetch_array(MYSQLI_ASSOC);
 	if($_SERVER['REQUEST_METHOD']=='POST'){
 		$username = $_POST['name'];
 		$surname = $_POST['surname'];
@@ -35,6 +40,8 @@
 		$email = $_POST['email'];
 		$doy = $_POST['doy'];
 		$street = $_POST['street'];
+		$name2 = $_POST['name2'];
+		$doy2 = $_POST['doy2'];
         if($doy!='' and $user['DOY']!=$doy){
             $query = "UPDATE User SET DOY ='$doy' WHERE User.ID =".$_SESSION['id'];
 			$result = $conn -> query($query);
@@ -69,6 +76,16 @@
 		}
 		if($street!='' and $user['street']!=$street){
 			$query = "UPDATE User SET street ='$street' WHERE User.ID =".$_SESSION['id'];
+			$result = $conn -> query($query);
+			if(!$result) die ($conn->error);
+		}
+		if($doy2!='' and $boss['DOY']!=$doy2){
+			$query = "UPDATE Company SET DOY ='$doy2' WHERE Company.ID =".$_SESSION['id'];
+			$result = $conn -> query($query);
+			if(!$result) die ($conn->error);
+		}
+		if($name2!='' and $boss['name']!=$name2){
+			$query = "UPDATE Company SET name ='$name2' WHERE Company.ID =".$_SESSION['id'];
 			$result = $conn -> query($query);
 			if(!$result) die ($conn->error);
 		}
@@ -165,6 +182,7 @@
 			</li>
 		</ul>
 	</nav>
+	<form class="" action="profile.php" method="post">
 	<div class="container ">
 		<div class="row">
 		<?php
@@ -175,7 +193,6 @@
 		?>
 		<h1>Ο λογαριασμός μου</h1>
 		</div>
-        <form class="" action="profile.php" method="post">
 		<div class="row">
 		      <div class="col-md-6">
 		          <h3>Τα Στοιχεία Μου</h3>
@@ -275,7 +292,6 @@
 			</div>
 		</div>
 		</div>
-    </form>
 		<div class="row">
 			<?php
 				if($login['type']==1 || $login['type']==3){
@@ -296,14 +312,14 @@
                           <div class=\"row\">
                               <label class=\"control-label col-sm-2\">Όνομα Εργοδοσίας:</label>
                               <div class=\"col-sm-6\">
-                                  <input type=\"text\" class=\"form-control\" id=\"name\" value=\"".$boss['name']."\" >
+                                  <input type=\"text\" class=\"form-control\" id=\"name2\" name=\"name2\" value=\"".$boss['name']."\" >
                               </div>
                           </div>
                           <br/>
                           <div class=\"row\">
                               <label class=\"control-label col-sm-2\">ΔΟΥ:</label>
                               <div class=\"col-sm-6\">
-                                  <input type=\"text\" class=\"form-control\" id=\"doy\"  name=\"doy\"  value=\"".$boss['DOY']."\">
+                                  <input type=\"text\" class=\"form-control\" id=\"doy2\"  name=\"doy2\"  value=\"".$boss['DOY']."\">
                               </div>
                           </div>
                           </br>
@@ -337,6 +353,7 @@
 			 ?>
 		</div>
         <!-- </form> -->
+	</form>
 	</div>
 </body>
 
