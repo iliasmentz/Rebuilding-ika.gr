@@ -171,6 +171,7 @@
 		?>
 		<h1>Ο λογαριασμός μου</h1>
 		</div>
+        <form class="" action="profile.php" method="post">
 		<div class="row">
 		      <div class="col-md-6">
 		          <h3>Τα Στοιχεία Μου</h3>
@@ -184,7 +185,6 @@
 					<button type="button" class="btn btn-primary" id="nochange" onclick="show_auto()">Αλλαγή Στοιχείων</button>
 		          </div>
 				  <div class="well" style="display:none;" id="welledit">
-				  	<form class="" action="profile.php" method="post">
 						<div class="row">
 							<label class="control-label col-sm-2">Όνομα:</label>
 							<div class="col-sm-6">
@@ -237,8 +237,8 @@
 						</div>
 
 				  </div>
-		    </div>
-			<div class="col-md-6">
+		        </div>
+		<div class="col-md-6">
 				<h3>Ασφάλιση</h3>
 				<div class="well" id="wellinfo2">
 					<p style="font-size: large;" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong> <?=$user['ID']?> </p>
@@ -268,10 +268,10 @@
                                 <button  onclick="hide_auto2()" type="button" class="btn btn-danger">Ακύρωση</button>
                             </div>
                         </div>
-                    </form>
 			</div>
 		</div>
 		</div>
+    </form>
 		<div class="row">
 			<?php
 				if($login['type']==1 || $login['type']==3){
@@ -280,12 +280,39 @@
 					if(!$result) die ($conn->error);
 					$result->data_seek(0);
 					$boss=$result->fetch_array(MYSQLI_ASSOC);
-					echo "<div class=\"col-md-6\">
+					echo "<div class=\"col-md-6\" >
 							<h3>Εργοδότης</h3>
-							<div class=\"well\">
+							<div class=\"well\" id=\"wellinfo3\">
 								<p style=\"font-size: large;\" ><strong>Όνομα Εργοδοσίας:</strong> ".$boss['name']."</p>
+                                <p style=\"font-size: large;\" ><strong>ΔΟΥ Εργοδοσίας:</strong> ".$boss['DOY']."</p>
+                                <button type=\"button\" class=\"btn btn-primary\" id=\"nochange3\" onclick=\"show_auto3()\">Αλλαγή Στοιχείων</button>
+
 							</div>
-						  </div>";
+						 <div class=\"well\" style=\"display:none;\" id=\"welledit3\">
+                          <div class=\"row\">
+                              <label class=\"control-label col-sm-2\">Όνομα Εργοδοσίας:</label>
+                              <div class=\"col-sm-6\">
+                                  <input type=\"text\" class=\"form-control\" id=\"name\" value=\"".$boss['name']."\" >
+                              </div>
+                          </div>
+                          <br/>
+                          <div class=\"row\">
+                              <label class=\"control-label col-sm-2\">ΔΟΥ:</label>
+                              <div class=\"col-sm-6\">
+                                  <input type=\"text\" class=\"form-control\" id=\"doy\"  name=\"doy\"  value=\"".$boss['DOY']."\">
+                              </div>
+                          </div>
+                          </br>
+                          <div class=\"row\">
+                              <div class=\"col-sm-6\">
+                                  <button type=\"submit\" class=\"btn btn-primary\" name=\"user_info\">Υποβολή</button>
+                              </div>
+                              <div class=\"col-sm-2\">
+                                  <button  onclick=\"hide_auto3()\" type=\"button\" class=\"btn btn-danger\">Ακύρωση</button>
+                              </div>
+                          </div>
+                      </div>
+                      </div>";
 				}
 			 ?>
 			<?php
@@ -305,6 +332,7 @@
 				}
 			 ?>
 		</div>
+        <!-- </form> -->
 	</div>
 </body>
 
@@ -331,6 +359,17 @@ function show_auto2(){
 		document.getElementById("welledit2").style.display="block";
 		document.getElementById("nochange2").style.display="none";
 		document.getElementById("wellinfo2").style.display="none";
+}
+function hide_auto3(){
+		document.getElementById("welledit3").style.display="none";
+		document.getElementById("nochange3").style.display="block";
+		document.getElementById("wellinfo3").style.display="block";
+}
+
+function show_auto3(){
+		document.getElementById("welledit3").style.display="block";
+		document.getElementById("nochange3").style.display="none";
+		document.getElementById("wellinfo3").style.display="none";
 }
 </script>
 </html>
