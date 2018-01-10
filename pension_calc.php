@@ -176,11 +176,11 @@
 						<br/>
 						<div class="row">
 							<div class="col-sm-6">
-								<button onclick="pension_calculate()" type="submit" class="btn btn-default">Υπολογισμός</button>
+								<button onclick="pension_calculate()" type="submit" class="btn btn-primary">Υπολογισμός</button>
 							</div>
-							<!-- <div class="col-sm-2">
-								<button  onclick="hide_auto()" type="button" class="btn btn-default">Ακύρωση</button>
-							</div> -->
+							 <div class="col-sm-2">
+								<button  onclick="window.location = '/IKA/pension.php';" type="button" class="btn btn-danger">Επιστροφή</button>
+							</div>
 						</div>
 				  </div>
 		    </div>
