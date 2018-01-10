@@ -371,7 +371,7 @@
                     echo "</table>
                                     </div>
                                       <div class=\"modal-footer\">
-                                        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Κλείσιμο</button>
+                                        <button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">Κλείσιμο</button>
                                       </div>
                                     </div>
                                   </div>
