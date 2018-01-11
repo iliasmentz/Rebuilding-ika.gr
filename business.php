@@ -103,7 +103,11 @@
 		</ul>
 	</nav>
 
-	<div class="mymenu">
+	<div class="mymenu"><?
+	    if (array_key_exists('work_message', $_SESSION)) {
+	            echo "<h1 style=\"text-align:center; color:red; \">".$_SESSION['work_message']."</h1>";
+	            $_SESSION['work_message']='';
+	        }?>
 	    <h1 style="text-align:center;"> Εργοδοσία </h1>
         <br/>
         <br/>

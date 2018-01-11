@@ -211,7 +211,7 @@
 		<div class="row">
 		<?php
 			if(array_key_exists('welcome', $_SESSION)){
-				echo '<h2>'.$_SESSION['welcome'].'</h2>';
+				echo '<h2 style= color:red; \">'.$_SESSION['welcome'].'</h2>';
 				$_SESSION['welcome']="";
 			}
 		?>
@@ -288,6 +288,18 @@
 				<div class="well" id="wellinfo2">
 					<p style="font-size: large;" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong> <?=$user['ID']?> </p>
 					<p style="font-size: large;" ><strong>ΔΟΥ:</strong> <?=$user['DOY']?> </p>
+					<?
+						$query = "SELECT * FROM pension_request WHERE ID =".$login['ID'];
+						$result = $conn -> query($query);
+						if(!$result) die ($conn->error);
+						if($result->num_rows!=0){
+				            echo "<div class=\"progress\">
+							    	<div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"50\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:50%\">
+							    		Το αίτημα συνταξιοδότησης είναι σε εξέλιξη
+							    	</div>
+							  	</div>";
+				        }
+					?>
                     <button type="button"  class="btn btn-primary" id="nochange2" onclick="show_auto2()">Αλλαγή Στοιχείων</button>
                 </div>
                 <div class="well" style="display:none;" id="welledit2">

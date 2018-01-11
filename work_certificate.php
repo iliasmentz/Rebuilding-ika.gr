@@ -19,7 +19,9 @@
 	$result->data_seek(0);
 	$login=$result->fetch_array(MYSQLI_ASSOC);
     if($login['type']!=1 and $login['type']!=3){
-        die("You are not a boss");
+		$_SESSION['work_message']='Δεν είστε εργοδότης για να εκτυπώσετε βεβαίωση';
+		header("location: business.php");
+		die();
     }
 
     $query = "SELECT * FROM User WHERE ID =".$login['ID'];
