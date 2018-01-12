@@ -352,11 +352,11 @@
 							  </div>
 							  <div class=\"modal-body\">
 								  	<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong>".$request['ID']."</p>
-									<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong>".$request['AFM']."   </p>
-									<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong>  ".$request['AMKA']." </p>
-									<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong>  ".$request['identifier']." </p>
-									<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong> ".$request['name']." </p>
-									<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong> ".$request['surname']." </p>
+									<p style=\"font-size: large;\" ><strong>ΑΦΜ:</strong>".$request['AFM']."   </p>
+									<p style=\"font-size: large;\" ><strong>ΑΜΚΑ:</strong>  ".$request['AMKA']." </p>
+									<p style=\"font-size: large;\" ><strong>Αριθμός Ταυτότητας:</strong>  ".$request['identifier']." </p>
+									<p style=\"font-size: large;\" ><strong>Όνομα:</strong> ".$request['name']." </p>
+									<p style=\"font-size: large;\" ><strong>Επώνυμο:</strong> ".$request['surname']." </p>
 							  </div>
 							  <div class=\"modal-footer\">
 								<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">κλείσιμο</button>
