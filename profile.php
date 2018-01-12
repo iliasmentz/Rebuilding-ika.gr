@@ -288,19 +288,6 @@
 				<div class="well" id="wellinfo2">
 					<p style="font-size: large;" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong> <?=$user['ID']?> </p>
 					<p style="font-size: large;" ><strong>ΔΟΥ:</strong> <?=$user['DOY']?> </p>
-					<?
-						$query = "SELECT * FROM pension_request WHERE ID =".$login['ID'];
-						$result = $conn -> query($query);
-						if(!$result) die ($conn->error);
-						if($result->num_rows!=0){
-				            echo "<div class=\"progress\">
-							    	<div class=\"progress-bar progress-bar-success progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:60%\">
-							    		Το αίτημα συνταξιοδότησης είναι σε εξέλιξη
-							    	</div>
-									<div class=\"progress-bar\" role=\"progressbar\" style=\"width:40%\"></div>
-							  	</div>";
-				        }
-					?>
                     <button type="button"  class="btn btn-primary" id="nochange2" onclick="show_auto2()">Αλλαγή Στοιχείων</button>
                 </div>
                 <div class="well" style="display:none;" id="welledit2">
@@ -328,6 +315,28 @@
                         </div>
 			</div>
 		</div>
+
+
+            <?
+                $query = "SELECT * FROM pension_request WHERE ID =".$login['ID'];
+                $result = $conn -> query($query);
+                if(!$result) die ($conn->error);
+                if($result->num_rows!=0){
+                    echo "
+                    <div class=\"col-md-6\">
+                    <h3>Το αίτημα συνταξιοδότησης σας έχει υποβληθεί</h3>
+                    <div class=\"well\" >
+                        <div class=\"progress\">
+                            <div class=\"progress-bar progress-bar-success progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:60%\">
+                            Κατάσταση: Περιμένει Έγκριση.
+                            </div>
+                            <div class=\"progress-bar\" role=\"progressbar\" style=\"width:40%\"></div>
+                        </div>
+                    </div>
+                    </div>";
+                }
+            ?>
+
 		</div>
 		<div class="row">
 			<?php
