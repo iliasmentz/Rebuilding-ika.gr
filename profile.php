@@ -322,17 +322,50 @@
                 $result = $conn -> query($query);
                 if(!$result) die ($conn->error);
                 if($result->num_rows!=0){
+					$result->data_seek(0);
+					$request=$result->fetch_array(MYSQLI_ASSOC);
                     echo "
                     <div class=\"col-md-6\">
                     <h3>Το αίτημα συνταξιοδότησης σας έχει υποβληθεί</h3>
                     <div class=\"well\" >
-                        <div class=\"progress\">
-                            <div class=\"progress-bar progress-bar-success progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:60%\">
-                            Κατάσταση: Περιμένει Έγκριση.
-                            </div>
-                            <div class=\"progress-bar\" role=\"progressbar\" style=\"width:40%\"></div>
-                        </div>
-                    </div>
+						<div class=\"row\">
+	                        <div class=\"progress\">
+	                            <div class=\"progress-bar progress-bar-success progress-bar-striped active\" role=\"progressbar\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:60%\">
+	                            Κατάσταση: Περιμένει Έγκριση.
+	                            </div>
+	                            <div class=\"progress-bar\" role=\"progressbar\" style=\"width:40%\"></div>
+	                        </div>
+						</div>
+						<div class=\"row\">
+							<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" style=\"float:right;\" data-target=\"#request\">
+							  Πληροφορίες Αιτήματος</button>
+						</div>
+						<!-- Modal -->
+						<div id=\"request\" class=\"modal fade\" role=\"dialog\">
+						  <div class=\"modal-dialog\">
+
+							<!-- Modal content-->
+							<div class=\"modal-content\">
+							  <div class=\"modal-header\">
+								<button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+								<h4 class=\"modal-title\">Πληροφορίες αιτήματος συνταξιοδότησης</h4>
+							  </div>
+							  <div class=\"modal-body\">
+								  	<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong>".$request['ID']."</p>
+									<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong>".$request['AFM']."   </p>
+									<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong>  ".$request['AMKA']." </p>
+									<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong>  ".$request['identifier']." </p>
+									<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong> ".$request['name']." </p>
+									<p style=\"font-size: large;\" ><strong>Αριθμός Μητρώου Ασφάλισης:</strong> ".$request['surname']." </p>
+							  </div>
+							  <div class=\"modal-footer\">
+								<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">κλείσιμο</button>
+							  </div>
+							</div>
+
+						  </div>
+						</div>
+					</div>
                     </div>";
                 }
             ?>
