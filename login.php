@@ -18,7 +18,7 @@
         $result = $conn -> query($query);
         if(!$result) die ($conn->error);
         if($result->num_rows==0){
-            $_SESSION['message']='Το mail είναι λάθος';
+            $_SESSION['message']='Το email είναι λάθος';
         }else{
             $result->data_seek(0);
             $login=$result->fetch_array(MYSQLI_ASSOC);
@@ -63,7 +63,7 @@
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/IKA/">ΙΚΑ</a>
+          <a class="navbar-brand" href="/sdi1400161/">ΙΚΑ</a>
         </div>
         <ul class="nav navbar-nav homenav">
           <li class="active"><a href="#">Σύνδεση</a></li>
@@ -90,7 +90,7 @@
                 <p class="input_title">Κωδικός</p>
                 <input type="password" id="inputPassword" class="login_box" placeholder="******" name="password"  required="true"/>
                 <button class="btn btn-lg btn-primary" type="submit">Σύνδεση</button>
-                <a href="/IKA/user_register.php">Δεν έχετε λογαριασμό;</a>
+                <a href="/sdi1400161/user_register.php">Δεν έχετε λογαριασμό;</a>
                 <hr/>
                 <a href="/forget" class="text-right">Ξεχάσατε Τον Κωδικό;</a>
             </form><!-- /form -->

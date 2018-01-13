@@ -12,8 +12,8 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="/IKA/css/custom.css">
-	<link href="/IKA/css/other.css" rel="stylesheet">
+	<link rel="stylesheet" href="/sdi1400161/css/custom.css">
+	<link href="/sdi1400161/css/other.css" rel="stylesheet">
   <style>
   div.relative {
     position: relative;
@@ -35,11 +35,11 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
             <div class="navbar-header">
-				<a class="navbar-brand" href="/IKA/">ΙΚΑ</a>
+				<a class="navbar-brand" href="/sdi1400161/">ΙΚΑ</a>
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li class="active">
-					<a href="/IKA/business.php">Εργοδοσία</a>
+					<a href="/sdi1400161/business.php">Εργοδοσία</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
@@ -54,17 +54,17 @@
 		            <?
 		            if (array_key_exists('login', $_SESSION)) {
 		                if($_SESSION['login']==1){
-		                    echo '<a href="/IKA/profile.php">'.$_SESSION['username'].'</a>
+		                    echo '<a href="/sdi1400161/profile.php">'.$_SESSION['username'].'</a>
 		                    </li>
 		                    <li>
-		                        <a href="/IKA/logout.php">Αποσύνδεση</a>
+		                        <a href="/sdi1400161/logout.php">Αποσύνδεση</a>
 		                    </li>
 		                    ';
 		                }else{
-		                    echo '<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>';
+		                    echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
 		                }
 		            }else{
-		                echo '<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>';
+		                echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
 		            }
 		             ?>
 		        </li>
@@ -74,16 +74,16 @@
 	<nav class="main-menu">
         <ul>
 			<li>
-				<a href="/IKA/"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
+				<a href="/sdi1400161/"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
 			</li>
 			<li class="has-subnav">
 				<a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="/IKA/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+				<a href="/sdi1400161/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="/IKA/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
+				<a href="/sdi1400161/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
 			</li>
 			<li>
 				<a href="#"><i class="fa fa-user-md"></i> <span class="nav-text">Γιατροί</span></a>
@@ -122,19 +122,19 @@
 	        <div class="c-fi-wrapper">
 	            <div class="c-fi-grid">
                             <div class="c-fi-cell">
-                                <a class="c-fi-link ga-event" data-event-action="Feature Image Click" target="_blank" href="/IKA/work_certificate.php" style="background-image:url(/IKA/img/index.jpeg)">
+                                <a class="c-fi-link ga-event" data-event-action="Feature Image Click" target="_blank" href="/sdi1400161/work_certificate.php" style="background-image:url(/sdi1400161/img/index.jpeg)">
                                     <div class="c-fi-text">Έκδοση Βεβαιώσης Εργοδότη</div>
                                 </a>
                             </div>
 
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/stamp.php/" style="background-image:url(/IKA/img/calc.jpg)">
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/stamp.php/" style="background-image:url(/sdi1400161/img/calc.jpg)">
 	                                <div class="c-fi-text">Υπολογισμός Ενσήμων Εργαζόμενου</div>
 	                            </a>
 	                        </div>
                             <br/>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/IKA/hire.php" style="background-image:url(/IKA/img/shakehands.jpg)">
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/hire.php" style="background-image:url(/sdi1400161/img/shakehands.jpg)">
 	                                <div class="c-fi-text">Πρόσληψη Εργαζόμενου</div>
 	                            </a>
 	                        </div>

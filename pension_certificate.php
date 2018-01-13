@@ -49,7 +49,7 @@
       <div class="container">
           <p style="size text-align:left;">
               <div style="font-size: medium">
-                  <img style="height: 120px; width: 200px;"src="/IKA/img/ika.jpg" alt="IKA">
+                  <img style="height: 120px; width: 200px;"src="/sdi1400161/img/ika.jpg" alt="IKA">
                   <span style="font-size: 200%; float:right;">Βεβαίωση Σύνταξης</span>
               </div>
           </p>

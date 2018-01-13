@@ -23,10 +23,10 @@
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li >
-					<a href="/IKA/pension.php">Σύνταξη</a>
+					<a href="/sdi1400161/pension.php">Σύνταξη</a>
 				</li>
                 <li class="active">
-                    <a href="/IKA/profile.php">Υπολογισμός Σύνταξης</a>
+                    <a href="/sdi1400161/profile.php">Υπολογισμός Σύνταξης</a>
                 </li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
@@ -41,17 +41,17 @@
 		            <?
 		            if (array_key_exists('login', $_SESSION)) {
 		                if($_SESSION['login']==1){
-		                    echo '<a href="/IKA/profile.php">'.$_SESSION['username'].'</a>
+		                    echo '<a href="/sdi1400161/profile.php">'.$_SESSION['username'].'</a>
 		                    </li>
 		                    <li>
-		                        <a href="/IKA/logout.php">Αποσύνδεση</a>
+		                        <a href="/sdi1400161/logout.php">Αποσύνδεση</a>
 		                    </li>
 		                    ';
 		                }else{
-		                    echo '<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>';
+		                    echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
 		                }
 		            }else{
-		                echo '<a href="/IKA/login.php">Είσοδος/Έγγραφη</a>';
+		                echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
 		            }
 		             ?>
 		        </li>
@@ -179,7 +179,7 @@
 								<button onclick="pension_calculate()" type="submit" class="btn btn-primary">Υπολογισμός</button>
 							</div>
 							 <div class="col-sm-2">
-								<button  onclick="window.location = '/IKA/pension.php';" type="button" class="btn btn-danger">Επιστροφή</button>
+								<button  onclick="window.location = '/sdi1400161/pension.php';" type="button" class="btn btn-danger">Επιστροφή</button>
 							</div>
 						</div>
 				  </div>

@@ -114,7 +114,7 @@
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/IKA/">ΙΚΑ</a>
+          <a class="navbar-brand" href="/sdi1400161/">ΙΚΑ</a>
         </div>
         <ul class="nav navbar-nav homenav">
           <li class="active"><a href="#">Εγγραφή</a></li>
@@ -166,7 +166,7 @@
                 </div> -->
                 <br>
                 <button class="btn btn-lg btn-primary" type="submit">Εγγραφή</button>
-				<a href="/IKA/login.php" class="text-right">Έχετε ήδη Λογαριασμό;</a>
+				<a href="/sdi1400161/login.php" class="text-right">Έχετε ήδη Λογαριασμό;</a>
             </form><!-- /form -->
         </div><!-- /card-container -->
     </div><!-- /container -->
