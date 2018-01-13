@@ -113,6 +113,36 @@
           </div>
         </div>
       </div>
+       <!-- Footer  -->
+     <footer class="footer-bs">
+         <div class="row">
+         	<div class="col-md-3 footer-brand animated fadeInLeft">
+             	<h2>IKA</h2>
+                 <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+             </div>
+         	<div class="col-md-4 footer-nav animated fadeInUp">
+             	<h4>ΜΕΝΟΥ</h4>
+             	<div class="col-md-6">
+                     <ul class="pages">
+                         <li><a href="#">Ασφάλεια</a></li>
+                         <li><a href="pension.php">Σύνταξη</a></li>
+                         <li><a href="business.php">Εργοδοσία</a></li>
+                         <li><a href="#">Γιατροί</a></li>
+                         <li><a href="#">Άτομα με ειδικές ανάγκες</a></li>
+                     </ul>
+                 </div>
+             	<div class="col-md-6">
+                     <ul class="list">
+                         <li><a href="login.php">Είσοδος/Εγγραφή</a></li>
+                         <li><a href="profile.php">Προφίλ</a></li>
+                         <li><a href="#">Ενημερώσεις</a></li>
+                         <li><a href="#">Συχνές Ερωτήσεις</a></li>
+                         <li><a href="#">Επικοινωνία</a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </footer>
 <!-- END MAIN -->
 
 </body>
