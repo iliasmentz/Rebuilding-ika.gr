@@ -73,7 +73,7 @@
                 <a href="/IKA/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
+                <a href="#"><i class="fa fa-user-md"></i> <span class="nav-text">Γιατροί</span></a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-wheelchair"></i> <span class="nav-text">Άτομα με ειδικές Αναπηρίες</span></a>

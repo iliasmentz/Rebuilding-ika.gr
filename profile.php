@@ -198,7 +198,7 @@
 				<a href="./business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
 			</li>
 			<li>
-				<a href="#"><i class="fa fa-credit-card"></i> <span class="nav-text">Οφειλές</span></a>
+				<a href="#"><i class="fa fa-user-md"></i> <span class="nav-text">Γιατροί</span></a>
 			</li>
 			<li>
 				<a href="#"><i class="fa fa-wheelchair"></i> <span class="nav-text">Άτομα με ειδικές Αναπηρίες</span></a>
@@ -219,7 +219,7 @@
 		<div class="row">
 		<?php
 			if(array_key_exists('welcome', $_SESSION)){
-				echo '<h2 style= color:red; \">'.$_SESSION['welcome'].'</h2>';
+				echo '<h2 style= color:green; \">'.$_SESSION['welcome'].'</h2>';
 				$_SESSION['welcome']="";
 			}
 		?>
