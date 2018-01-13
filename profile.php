@@ -93,6 +93,14 @@
 		header("location: profile.php");
 		die();
 	}
+	else if(isset($_GET['delete'])){
+		$query = "DELETE FROM pension_request WHERE ID=".$login['ID'];
+		$result = $conn -> query($query);
+		if(!$result) die ($conn->error);
+		$_SESSION['welcome']='Το αίτημα ακυρώθηκε με επιτυχία';
+		header("location: profile.php");
+		die();
+	}
  ?>
 <head>
 	<title>Profile</title>
@@ -337,8 +345,10 @@
 	                        </div>
 						</div>
 						<div class=\"row\">
-							<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" style=\"float:right;\" data-target=\"#request\">
+							<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\"  data-target=\"#request\">
 							  Πληροφορίες Αιτήματος</button>
+							  <button type=\"button\" class=\"btn btn-danger\"  data-toggle=\"modal\"  data-target=\"#delete\" >
+  							  Ακύρωση αιτήματος</button>
 						</div>
 						<!-- Modal -->
 						<div id=\"request\" class=\"modal fade\" role=\"dialog\">
@@ -365,6 +375,30 @@
 
 						  </div>
 						</div>
+						<div id=\"delete\" class=\"modal fade\" role=\"dialog\">
+						  <div class=\"modal-dialog\">
+
+							<!-- Modal content-->
+							<div class=\"modal-content\">
+							  <div class=\"modal-header\">
+								<button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+								<h4 class=\"modal-title\">Είστε σίγουροι ότι θέλετε να ακυρώσετε το αίτημα συνταξιοδότησης; </h4>
+							  </div>
+							  <div class=\"row\">
+							  	<div class=\"col-sm-3 \">
+							  	</div>
+							  	<div class=\"col-sm-4 \">
+									<form>
+								  		<input type=\"button\" class=\"btn btn-success \"  data-dismiss=\"modal\" value=\"Ναι\"  onclick=\"location.href = 'profile.php?delete=true';\"></input>
+									</form method=\"get\" action=\"profile.php\" >
+								</div>
+								  <button type=\"button\" class=\"btn btn-danger\" data-dismiss=\"modal\">Όχι</button>
+							  	</div>
+							</div>
+
+						  </div>
+						</div>
+
 					</div>
                     </div>";
                 }
