@@ -211,7 +211,7 @@
 		<div class="row">
 		<?php
 			if(array_key_exists('welcome', $_SESSION)){
-				echo '<h2 style= color:red; \">'.$_SESSION['welcome'].'</h2>';
+				echo '<h2 style= color:green; \">'.$_SESSION['welcome'].'</h2>';
 				$_SESSION['welcome']="";
 			}
 		?>
