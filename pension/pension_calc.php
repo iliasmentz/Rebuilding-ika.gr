@@ -67,7 +67,7 @@
 				<a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="sdi1400161/pension/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+				<a href="/sdi1400161/pension/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
 			</li>
 			<li class="has-subnav">
 				<a href="/sdi1400161/work/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>

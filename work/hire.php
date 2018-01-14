@@ -20,22 +20,22 @@
 	if(!$result) die ($conn->error);
 	$result->data_seek(0);
 	$login=$result->fetch_array(MYSQLI_ASSOC);
-	if($login['type']!=1 and $login['type']!=3){
-        $_SESSION['welcome']="Μολίς γίνατε εργοδότης.";
-		if($login['type']==0){
-            $var=1;
-        }else{
-            $var=3;
-        }
-        $query = "UPDATE Login SET type ='$var' WHERE Login.ID =".$_SESSION['id'];
-        $result = $conn -> query($query);
-        if(!$result) die ($conn->error);
-
-        $query ="INSERT INTO Company(ID) VALUES" . "(".$_SESSION['id'].")";
-        $result = $conn -> query($query);
-        if(!$result) echo " INSERT failed $query<br>". $conn->error;
-	}
     if($_SERVER['REQUEST_METHOD']=='POST'){
+        if($login['type']!=1 and $login['type']!=3){
+            $_SESSION['welcome']="Μολίς γίνατε εργοδότης.";
+            if($login['type']==0){
+                $var=1;
+            }else{
+                $var=3;
+            }
+            $query = "UPDATE Login SET type ='$var' WHERE Login.ID =".$_SESSION['id'];
+            $result = $conn -> query($query);
+            if(!$result) die ($conn->error);
+
+            $query ="INSERT INTO Company(ID) VALUES" . "(".$_SESSION['id'].")";
+            $result = $conn -> query($query);
+            if(!$result) echo " INSERT failed $query<br>". $conn->error;
+        }
         $name = $_POST['name'];
         $surname = $_POST['surname'];
         $identifier = $_POST['identifier'];
