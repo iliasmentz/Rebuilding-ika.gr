@@ -23,10 +23,10 @@
             </div>
             <ul class="nav navbar-nav homenav">
                 <li>
-                    <a href="/sdi1400161/business.php">Εργοδοσία</a>
+                    <a href="/sdi1400161/work/business.php">Εργοδοσία</a>
                 </li>
                 <li class="active">
-                    <a href="/sdi1400161/stamp.php">Υπολογισμός Ενσήμων</a>
+                    <a href="/sdi1400161//work/stamp.php">Υπολογισμός Ενσήμων</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav mynavbar">
@@ -70,7 +70,7 @@
                 <a href="/sdi1400161/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
             </li>
             <li class="has-subnav">
-                <a href="/sdi1400161/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
+                <a href="/sdi1400161/work/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-user-md"></i> <span class="nav-text">Γιατροί</span></a>
@@ -194,7 +194,7 @@
                                 <button onclick="stamp_calc()" type="submit" class="btn btn-primary">Υπολογισμός</button>
                             </div>
                             <div class="col-sm-2">
-                               <button  onclick="window.location = '/sdi1400161/business.php';" type="button" class="btn btn-danger">Επιστροφή</button>
+                               <button  onclick="window.location = '/sdi1400161/work/business.php';" type="button" class="btn btn-danger">Επιστροφή</button>
                            </div>
 
                     </div>

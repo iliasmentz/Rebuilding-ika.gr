@@ -10,7 +10,7 @@
         header("location:login.php");
         die();
     }
-    require_once 'login_db.php';
+    require_once '../login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
     mysqli_set_charset($conn,'utf8');
     if($conn->connect_error) die($conn->connect_error);
@@ -61,21 +61,21 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
       <!-- Latest compiled and minified CSS -->
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="./css/custom.css">
-      <link rel="stylesheet" href="./css/other.css" >
+      <link rel="stylesheet" href="/sdi1400161/css/custom.css">
+      <link rel="stylesheet" href="/sdi1400161/css/other.css" >
    </head>
    <body>
       <nav class="navbar navbar-inverse">
          <div class="container-fluid">
             <div class="navbar-header">
-               <a class="navbar-brand" href="./">ΙΚΑ</a>
+               <a class="navbar-brand" href="/sdi1400161/">ΙΚΑ</a>
             </div>
             <ul class="nav navbar-nav homenav">
                <li >
-                  <a href="/sdi1400161/business.php">Εργοδοσία</a>
+                  <a href="/sdi1400161/work/business.php">Εργοδοσία</a>
                </li>
                <li class="active">
-                  <a href="/sdi1400161/stamp.php">Απόδοση Ενσυμάτων</a>
+                  <a href="/sdi1400161//work/stamp.php">Απόδοση Ενσυμάτων</a>
                </li>
             </ul>
             <ul class="nav navbar-nav mynavbar">
@@ -118,7 +118,7 @@
                <a href="./pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
             </li>
             <li class="has-subnav">
-               <a href="./business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
+               <a href="/sdi1400161/work/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
             </li>
             <li>
                <a href="#"><i class="fa fa-user-md"></i> <span class="nav-text">Γιατροί</span></a>
@@ -223,7 +223,7 @@
                            <button type="submit" class="btn btn-primary">Πρόσληψη</button>
                         </div>
                         <div class="col-sm-2">
-                           <button  onclick="window.location = '/sdi1400161/business.php';" type="button" class="btn btn-danger">Επιστροφή</button>
+                           <button  onclick="window.location = '/sdi1400161/work/business.php';" type="button" class="btn btn-danger">Επιστροφή</button>
                         </div>
                      </div>
                   </form>
