@@ -164,7 +164,7 @@
                     </br>
 
                      <div class="row">
-                        <label class="control-label col-sm-4">Όνομα Εργαζομένου:</label>
+                        <label class="control-label col-sm-4">Όνομα Εργαζομένου(*):</label>
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
@@ -173,7 +173,7 @@
                      </div>
                      <br/>
                         <div class="row">
-                           <label class="control-label col-sm-4">Επίθετο Εργαζομένου:</label>
+                           <label class="control-label col-sm-4">Επίθετο Εργαζομένου(*):</label>
                         </div>
                         <div class="row">
                            <div class="col-sm-6">
@@ -182,7 +182,7 @@
                         </div>
                         <br/>
                     <div class="row">
-                        <label class="control-label col-sm-4">Αριθμός Ταυτότητας:</label>
+                        <label class="control-label col-sm-4">Αριθμός Ταυτότητας(*):</label>
                     </div>
                      <div class="row">
                         <div class="col-sm-6">
@@ -200,7 +200,7 @@
                      </div>
                      <br/>
                      <div class="row">
-                        <label class="control-label col-sm-4">Μηνιαίες Αποδοχές</label>
+                        <label class="control-label col-sm-4">Μηνιαίες Αποδοχές(*):</label>
                      </div>
                      <div class="row">
                         <div class="col-sm-6">
@@ -209,7 +209,7 @@
                      </div>
                      <br/>
                      <div class="row">
-                        <label class="control-label col-sm-4">Αξία Ενσήμου:</label>
+                        <label class="control-label col-sm-4">Αξία Ενσήμου(*):</label>
                      </div>
                      <div class="row">
                         <div class="col-sm-6">

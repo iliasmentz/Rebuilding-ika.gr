@@ -138,7 +138,7 @@
 		      <div class="col-md-6">
 				  <div class="well" id="welledit">
 					  <div class="row">
-						  <label class="control-label col-sm-4">Ημερομηνία Γέννησης</label>
+						  <label class="control-label col-sm-6">Ημερομηνία Γέννησης(*):</label>
 					  </div>
 					  <div class="row">
 						  <div class="col-sm-6">
@@ -147,7 +147,7 @@
 					  </div>
 					  <br/>
 						<div class="row">
-							<label class="control-label col-sm-4">Έτη εργασίας έως σήμερα:</label>
+							<label class="control-label col-sm-6">Έτη εργασίας έως σήμερα(*):</label>
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -156,7 +156,7 @@
 						</div>
                         <br/>
 						<div class="row">
-							<label class="control-label col-sm-4">Μηνιαίες Αποδοχές Σήμερα:</label>
+							<label class="control-label col-sm-8">Μηνιαίες Αποδοχές Σήμερα(*):</label>
 						</div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -166,7 +166,7 @@
                         <br/>
 
                         <div class="row">
-                            <label class="control-label col-sm-4">Ηλικία Συνταξιοδότησης</label>
+                            <label class="control-label col-sm-6">Ηλικία Συνταξιοδότησης(*):</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">

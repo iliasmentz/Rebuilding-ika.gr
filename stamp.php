@@ -91,7 +91,7 @@
     </nav>
     <div class="container ">
         <div class="row">
-            <h1>Υποβολή αίτησης απόδοσης ενσημάτων</h1>
+            <h1>Υπολογισμός Ενσήμων</h1>
             </br>
             </br>
         </div>
@@ -105,7 +105,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="name" placeholder="Όνομα" name="name" required="true" autofocus="true">
+                                <input type="text" class="form-control" id="name" placeholder="Όνομα" name="name" >
                             </div>
                         </div>
                         <br/>
@@ -114,7 +114,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="surname" placeholder="Επίθετο" name="surname" required="true" autofocus="true">
+                                <input type="text" class="form-control" id="surname" placeholder="Επίθετο">
                             </div>
                         </div>
                         <br/>
@@ -123,7 +123,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="code" placeholder="ΧΧ ΧΧΧΧΧΧ" name="code" required="true" autofocus="true">
+                                <input type="text" class="form-control" id="code" placeholder="ΧΧ ΧΧΧΧΧΧ" name="code">
                             </div>
                         </div>
                         <br/>
@@ -151,7 +151,7 @@
                 <div class="col-sm-6">
                     <div class="well">
                         <div class="row">
-                            <label class="control-label col-sm-4">Ημέρες Εργασίας:</label>
+                            <label class="control-label col-sm-4">Ημέρες Εργασίας(*):</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -160,7 +160,7 @@
                         </div>
                         <br/>
                         <div class="row">
-                            <label class="control-label col-sm-4">Αξία Ενσήμου:</label>
+                            <label class="control-label col-sm-4">Αξία Ενσήμου(*):</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -181,7 +181,7 @@
                         </div>
                         </br>
                         <div class="row">
-                            <label class="control-label col-sm-4">Υπερωρίες:</label>
+                            <label class="control-label col-sm-4">Υπερωρίες(*):</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
