@@ -101,7 +101,7 @@
                 <div class="col-md-6">
                     <div class="well" id="welledit">
                         <div class="row">
-                            <label class="control-label col-sm-4">Όνομα Εργαζομένου:</label>
+                            <label class="control-label col-sm-6">Όνομα Εργαζομένου:</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -110,7 +110,7 @@
                         </div>
                         <br/>
                         <div class="row">
-                            <label class="control-label col-sm-4">Επίθετο Εργαζομένου:</label>
+                            <label class="control-label col-sm-6">Επίθετο Εργαζομένου:</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -119,7 +119,7 @@
                         </div>
                         <br/>
                         <div class="row">
-                            <label class="control-label col-sm-4">Αριθμός Ταυτότητας:</label>
+                            <label class="control-label col-sm-6">Αριθμός Ταυτότητας:</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -128,7 +128,7 @@
                         </div>
                         <br/>
                         <div class="row">
-                            <label class="control-label col-sm-4">Ημερομηνία έναρξης ενσημοδότησης</label>
+                            <label class="control-label col-sm-8">Ημερομηνία έναρξης ενσημοδότησης:</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -137,7 +137,7 @@
                         </div>
                         <br/>
                         <div class="row">
-                            <label class="control-label col-sm-4">Ημερομηνία πάυσης ενσημοδότησης</label>
+                            <label class="control-label col-sm-8">Ημερομηνία πάυσης ενσημοδότησης:</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -151,7 +151,7 @@
                 <div class="col-sm-6">
                     <div class="well">
                         <div class="row">
-                            <label class="control-label col-sm-4">Ημέρες Εργασίας(*):</label>
+                            <label class="control-label col-sm-6">Ημέρες Εργασίας(*):</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -160,7 +160,7 @@
                         </div>
                         <br/>
                         <div class="row">
-                            <label class="control-label col-sm-4">Αξία Ενσήμου(*):</label>
+                            <label class="control-label col-sm-6">Αξία Ενσήμου(*):</label>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -169,7 +169,7 @@
                         </div>
                         </br>
                         <div class="row">
-                            <label for="sel2" class="control-label col-sm-12">Τύπος Απασχόλησης</label>
+                            <label for="sel2" class="control-label col-sm-12">Τύπος Απασχόλησης:</label>
                         </div>
                         <div class="row">
                             <div class=" col-sm-6">
