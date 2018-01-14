@@ -3,11 +3,11 @@
 <?php session_start();
 	if(!array_key_exists('login', $_SESSION)){
 		$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
-		header("location:login.php");
+		header("location:../user/login.php");
 	}
 	if($_SESSION['login']!=1){
 			$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
-			header("location:login.php");
+			header("location:../user/login.php");
 	}
     require_once '../login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);

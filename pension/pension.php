@@ -42,7 +42,7 @@
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li class="active">
-					<a href="/sdi1400161/pension.php">Σύνταξη</a>
+					<a href="/sdi1400161/pension/pension.php">Σύνταξη</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
@@ -57,17 +57,17 @@
                     <?
                     if (array_key_exists('login', $_SESSION)) {
                         if($_SESSION['login']==1){
-                            echo '<a href="/sdi1400161/profile.php">'.$_SESSION['username'].'</a>
+                            echo '<a href="/sdi1400161/user/profile.php">'.$_SESSION['username'].'</a>
                             </li>
                             <li>
                                 <a href="/sdi1400161/logout.php">Αποσύνδεση</a>
                             </li>
                             ';
                         }else{
-                            echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
+                            echo '<a href="/sdi1400161/user/login.php">Είσοδος/Έγγραφη</a>';
                         }
                     }else{
-                        echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
+                        echo '<a href="/sdi1400161/user/login.php">Είσοδος/Έγγραφη</a>';
                     }
                      ?>
                 </li>
@@ -83,7 +83,7 @@
                 <a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
             </li>
             <li class="has-subnav">
-                <a href="/sdi1400161/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+                <a href="/sdi1400161/pension/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
             </li>
             <li class="has-subnav">
                 <a href="/sdi1400161/work/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
@@ -126,17 +126,17 @@
             <div class="c-fi-grid">
 
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/pension_certificate.php" target="_blank" style="background-image:url(/sdi1400161/img/certificate.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/pension/pension_certificate.php" target="_blank" style="background-image:url(/sdi1400161/img/certificate.jpg)">
                                 <div class="c-fi-text">Βεβαίωση Σύνταξης</div>
                             </a>
                         </div>
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/pension_calc.php" style="background-image:url(/sdi1400161/img/calculating.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/pension/pension_calc.php" style="background-image:url(/sdi1400161/img/calculating.jpg)">
                                 <div class="c-fi-text">Υπολογισμός Σύνταξης</div>
                             </a>
                         </div>
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/retirementApp.php" style="background-image:url(/sdi1400161/img/request.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/pension/retirementApp.php" style="background-image:url(/sdi1400161/img/request.jpg)">
                                 <div class="c-fi-text">Ηλεκτρονική Υποβολή <br/>Αίτησης Συνταξιοδότησης</div>
                             </a>
                         </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     session_start();
-    require_once 'login_db.php';
+    require_once '../login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
     mysqli_set_charset($conn,'utf8');
     if($conn->connect_error) die($conn->connect_error);
@@ -102,10 +102,10 @@
     <title>Εγγραφή</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="./css/host_register.css" rel="stylesheet"/>
+    <link href="/sdi1400161/css/host_register.css" rel="stylesheet"/>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script src="./js/login.js"></script>
+     <script src="/sdi1400161/js/login.js"></script>
 
 </head>
 

@@ -3,15 +3,15 @@
 <?php session_start();
 	if(!array_key_exists('login', $_SESSION)){
 		$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
-		header("location:login.php");
+		header("location:../user/login.php");
 		die();
 	}
 	if($_SESSION['login']!=1){
 			$_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
-			header("location:login.php");
+			header("location:../user/login.php");
 			die();
 	}
-    require_once 'login_db.php';
+    require_once '..login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
     if($conn->connect_error) die($conn->connect_error);
     mysqli_set_charset($conn,'utf8');
@@ -22,7 +22,7 @@
 	$login=$result->fetch_array(MYSQLI_ASSOC);
 	if($login['type']!=2 and $login['type']!=3){
 		$_SESSION['pension_message']='Δεν είστε συνταξιούχος για να εκτυπώσετε βεβαίωση';
-		header("location: pension.php");
+		header("location:../pension/pension.php");
 		die();
 	}
     $query = "SELECT * FROM User WHERE ID =".$login['ID'];

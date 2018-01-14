@@ -4,12 +4,12 @@
     // check if he has logged in
     if(array_key_exists('login', $_SESSION)){
         if($_SESSION['login']==1){
-            header("location:index.php");
+            header("location:../index.php");
             die();
         }
 	}
     $_SESSION['message']='';
-    require_once 'login_db.php';
+    require_once '../login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
     if($conn->connect_error) die($conn->connect_error);
     if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -31,7 +31,7 @@
                 $user=$result->fetch_array(MYSQLI_ASSOC);
                 $_SESSION['username'] = $user['Name'];
                 $_SESSION['id'] = $user['ID'];
-                header("location:index.php");
+                header("location:../index.php");
                 die();
             }else{
                 $_SESSION['message']='Ο κωδικός είναι λάθος';
@@ -53,7 +53,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-	<link href="./css/Login.css" rel="stylesheet"/>
+	<link href="/sdi1400161/css/Login.css" rel="stylesheet"/>
 
 
 </head>
@@ -90,7 +90,7 @@
                 <p class="input_title">Κωδικός</p>
                 <input type="password" id="inputPassword" class="login_box" placeholder="******" name="password"  required="true"/>
                 <button class="btn btn-lg btn-primary" type="submit">Σύνδεση</button>
-                <a href="/sdi1400161/user_register.php">Δεν έχετε λογαριασμό;</a>
+                <a href="/sdi1400161/user/user_register.php">Δεν έχετε λογαριασμό;</a>
                 <hr/>
                 <a href="/forget" class="text-right">Ξεχάσατε Τον Κωδικό;</a>
             </form><!-- /form -->

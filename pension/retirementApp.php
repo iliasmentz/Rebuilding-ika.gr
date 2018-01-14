@@ -2,15 +2,15 @@
 <?php session_start();
     if(!array_key_exists('login', $_SESSION)){
         $_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
-        header("location:login.php");
+        header("location:../user/login.php");
         die();
     }
     if($_SESSION['login']!=1){
         $_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
-        header("location:login.php");
+        header("location:../user/login.php");
         die();
     }
-    require_once 'login_db.php';
+    require_once '../login_db.php';
     $conn = new mysqli($hn,$un,$pw,$db);
     mysqli_set_charset($conn,'utf8');
     if($conn->connect_error) die($conn->connect_error);
@@ -50,7 +50,7 @@
         $result = $conn -> query($query);
         if(!$result) echo " INSERT failed $query<br>". $conn->error;
         $_SESSION['welcome']='Το αίτημα συνταξιοδότησης έγινε δεκτό';
-        header("location:profile.php");
+        header("location:../user/profile.php");
     }
  ?>
 <html>
@@ -64,22 +64,22 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
       <!-- Latest compiled and minified CSS -->
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="./css/custom.css">
-      <link rel="stylesheet" href="./css/other.css" >
-       <script src="./js/pension.js"></script>
+      <link rel="stylesheet" href="/sdi1400161/css/custom.css">
+      <link rel="stylesheet" href="/sdi1400161/css/other.css" >
+       <script src="/sdi1400161/js/pension.js"></script>
    </head>
    <body>
       <nav class="navbar navbar-inverse">
          <div class="container-fluid">
             <div class="navbar-header">
-               <a class="navbar-brand" href="./">ΙΚΑ</a>
+               <a class="navbar-brand" href="/sdi1400161/">ΙΚΑ</a>
             </div>
             <ul class="nav navbar-nav homenav">
                <li>
-                  <a href="./pension.php">Σύνταξη</a>
+                  <a href="/sdi1400161/pension/pension.php">Σύνταξη</a>
                </li>
                <li class="active">
-                  <a href="./retirementApp.php">Αίτημα Σύνταξης</a>
+                  <a href="/sdi1400161/pension/retirementApp.php">Αίτημα Σύνταξης</a>
                </li>
             </ul>
             <ul class="nav navbar-nav mynavbar">
@@ -93,17 +93,17 @@
                    <?
                    if (array_key_exists('login', $_SESSION)) {
                        if($_SESSION['login']==1){
-                           echo '<a href="/sdi1400161/profile.php">'.$_SESSION['username'].'</a>
+                           echo '<a href="/sdi1400161/user/profile.php">'.$_SESSION['username'].'</a>
                            </li>
                            <li>
                                <a href="/sdi1400161/logout.php">Αποσύνδεση</a>
                            </li>
                            ';
                        }else{
-                           echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
+                           echo '<a href="/sdi1400161/user/login.php">Είσοδος/Έγγραφη</a>';
                        }
                    }else{
-                       echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
+                       echo '<a href="/sdi1400161/user/login.php">Είσοδος/Έγγραφη</a>';
                    }
                     ?>
                </li>
@@ -113,13 +113,13 @@
       <nav class="main-menu">
          <ul>
             <li>
-               <a href="./"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
+               <a href="/sdi1400161/"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
             </li>
             <li class="has-subnav">
                <a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
             </li>
             <li class="has-subnav">
-               <a href="./pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+               <a href="/sdi1400161/pension/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
             </li>
             <li class="has-subnav">
                <a href="/sdi1400161/work/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>

@@ -2,12 +2,12 @@
 <?php session_start();
     if(!array_key_exists('login', $_SESSION)){
         $_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
-        header("location:login.php");
+        header("location:../user/login.php");
         die();
     }
     if($_SESSION['login']!=1){
         $_SESSION['mustlogin']="Πρέπει να συνδεθείς πρώτα";
-        header("location:login.php");
+        header("location:../user/login.php");
         die();
     }
     require_once '../login_db.php';
@@ -46,7 +46,7 @@
         $result = $conn -> query($query);
         if(!$result) echo " INSERT failed $query<br>". $conn->error;
         $_SESSION['welcome']=$_SESSION['welcome']." Η πρόσληψη έγινε επιτυχώς";
-        header("location:profile.php");
+        header("location:../user/profile.php");
         die();
     }
 ?>
@@ -89,17 +89,17 @@
                    <?
                    if (array_key_exists('login', $_SESSION)) {
                        if($_SESSION['login']==1){
-                           echo '<a href="/sdi1400161/profile.php">'.$_SESSION['username'].'</a>
+                           echo '<a href="/sdi1400161/user/profile.php">'.$_SESSION['username'].'</a>
                            </li>
                            <li>
                                <a href="/sdi1400161/logout.php">Αποσύνδεση</a>
                            </li>
                            ';
                        }else{
-                           echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
+                           echo '<a href="/sdi1400161/user/login.php">Είσοδος/Έγγραφη</a>';
                        }
                    }else{
-                       echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
+                       echo '<a href="/sdi1400161/user/login.php">Είσοδος/Έγγραφη</a>';
                    }
                     ?>
                </li>
@@ -109,13 +109,13 @@
       <nav class="main-menu">
          <ul>
             <li>
-               <a href="./"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
+               <a href="/sdi1400161/"><i class="fa fa-home fa-2x"></i> <span class="nav-text">Αρχική</span></a>
             </li>
             <li class="has-subnav">
                <a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
             </li>
             <li class="has-subnav">
-               <a href="./pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+               <a href="/sdi1400161/pension/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
             </li>
             <li class="has-subnav">
                <a href="/sdi1400161/work/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>

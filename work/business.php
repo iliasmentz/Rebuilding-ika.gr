@@ -54,17 +54,17 @@
 		            <?
 		            if (array_key_exists('login', $_SESSION)) {
 		                if($_SESSION['login']==1){
-		                    echo '<a href="/sdi1400161/profile.php">'.$_SESSION['username'].'</a>
+		                    echo '<a href="/sdi1400161/user/profile.php">'.$_SESSION['username'].'</a>
 		                    </li>
 		                    <li>
 		                        <a href="/sdi1400161/logout.php">Αποσύνδεση</a>
 		                    </li>
 		                    ';
 		                }else{
-		                    echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
+		                    echo '<a href="/sdi1400161/user/login.php">Είσοδος/Έγγραφη</a>';
 		                }
 		            }else{
-		                echo '<a href="/sdi1400161/login.php">Είσοδος/Έγγραφη</a>';
+		                echo '<a href="/sdi1400161/user/login.php">Είσοδος/Έγγραφη</a>';
 		            }
 		             ?>
 		        </li>
@@ -80,7 +80,7 @@
 				<a href="#"><i class="fa fa-files-o" ></i> <span class="nav-text">Ασφάλεια</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="/sdi1400161/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
+				<a href="/sdi1400161/pension/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
 			</li>
 			<li class="has-subnav">
 				<a href="/sdi1400161/work/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
