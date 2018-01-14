@@ -179,7 +179,7 @@
 								<button onclick="pension_calculate()" type="submit" class="btn btn-primary">Υπολογισμός</button>
 							</div>
 							 <div class="col-sm-2">
-								<button  onclick="window.location = '/sdi1400161/pension.php';" type="button" class="btn btn-danger">Επιστροφή</button>
+								<button  onclick="window.location = '/sdi1400161/pension/pension.php';" type="button" class="btn btn-danger">Επιστροφή</button>
 							</div>
 						</div>
 				  </div>
