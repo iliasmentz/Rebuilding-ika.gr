@@ -39,7 +39,7 @@
 			</div>
 			<ul class="nav navbar-nav homenav">
 				<li class="active">
-					<a href="/sdi1400161/business.php">Εργοδοσία</a>
+					<a href="/sdi1400161/work/business.php">Εργοδοσία</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav mynavbar">
@@ -83,7 +83,7 @@
 				<a href="/sdi1400161/pension.php"><i class="fa fa-money"></i> <span class="nav-text">Σύνταξη</span></a>
 			</li>
 			<li class="has-subnav">
-				<a href="/sdi1400161/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
+				<a href="/sdi1400161/work/business.php"><i class="fa fa-building"></i> <span class="nav-text">Εργοδοσία</span></a>
 			</li>
 			<li>
 				<a href="#"><i class="fa fa-user-md"></i> <span class="nav-text">Γιατροί</span></a>
@@ -122,19 +122,19 @@
 	        <div class="c-fi-wrapper">
 	            <div class="c-fi-grid">
                             <div class="c-fi-cell">
-                                <a class="c-fi-link ga-event" data-event-action="Feature Image Click" target="_blank" href="/sdi1400161/work_certificate.php" style="background-image:url(/sdi1400161/img/index.jpeg)">
+                                <a class="c-fi-link ga-event" data-event-action="Feature Image Click" target="_blank" href="/sdi1400161/work/work_certificate.php" style="background-image:url(/sdi1400161/img/index.jpeg)">
                                     <div class="c-fi-text">Έκδοση Βεβαιώσης Εργοδότη</div>
                                 </a>
                             </div>
 
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/stamp.php/" style="background-image:url(/sdi1400161/img/calc.jpg)">
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/work/stamp.php/" style="background-image:url(/sdi1400161/img/calc.jpg)">
 	                                <div class="c-fi-text">Υπολογισμός Ενσήμων Εργαζόμενου</div>
 	                            </a>
 	                        </div>
                             <br/>
 	                        <div class="c-fi-cell">
-	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/hire.php" style="background-image:url(/sdi1400161/img/shakehands.jpg)">
+	                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/work/hire.php" style="background-image:url(/sdi1400161/img/shakehands.jpg)">
 	                                <div class="c-fi-text">Πρόσληψη Εργαζόμενου</div>
 	                            </a>
 	                        </div>

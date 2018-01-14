@@ -69,7 +69,7 @@
                             </a>
                         </div>
                         <div class="c-fi-cell">
-                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="./business.php/" style="background-image:url(./img/work-cover.jpg)">
+                            <a class="c-fi-link ga-event" data-event-action="Feature Image Click" href="/sdi1400161/work/business.php/" style="background-image:url(./img/work-cover.jpg)">
                                 <div class="c-fi-text">Εργοδοσία</div>
                             </a>
                         </div>
@@ -124,11 +124,11 @@
              	<h4>ΜΕΝΟΥ</h4>
              	<div class="col-md-6">
                      <ul class="pages">
-                         <li><a href="#">Ασφάλεια</a></li>
-                         <li><a href="pension.php">Σύνταξη</a></li>
-                         <li><a href="business.php">Εργοδοσία</a></li>
-                         <li><a href="#">Γιατροί</a></li>
-                         <li><a href="#">Άτομα με ειδικές ανάγκες</a></li>
+                         <li><a href="#">Ασφαλεια</a></li>
+                         <li><a href="pension.php">Συνταξη</a></li>
+                         <li><a href="business.php">Εργοδοσια</a></li>
+                         <li><a href="#">Γιατροι</a></li>
+                         <li><a href="#">Ατομα με ειδικες αναγκες</a></li>
                      </ul>
                  </div>
              	<div class="col-md-6">
